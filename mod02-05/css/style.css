@@ -1,3 +1,7 @@
+/*
+*
+*
+*/
 /* css reset */
 * {
 	/*removes deafault paddings and margin*/
@@ -5,7 +9,9 @@
 	padding: 0;
 	box-sizing: border-box; /*to avoid overflow*/
 	font-family: 'Roboto', sans-serif;
+
 }
+
 
 .wrapper {
 	width: 700px;	/**/
@@ -30,3 +36,115 @@ footer{
 	text-align: center;
 	font-size: 13px;
 }
+
+form{
+	text-align: right;
+	padding: 10px 20px 20px; /* clockwise */
+}
+
+main {
+	padding: 25px 10px 10px;
+}
+
+h3 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+/*
+Dashboard
+*/
+
+#postCircle, 
+#imageCircle{
+	height: 70px;
+	width: 70px;
+	background-color: red;
+	border-radius: 50%;
+	color: white;
+	text-align: center;
+	line-height: 70px;
+	float: left;
+}
+
+#postCircle{
+	background-color: #4acf50;
+}
+#imageCircle{
+	background-color: #09c;
+}
+
+.inline-blocked {
+    display: inline-block;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dashColumns {
+	width: 32%;
+	height: 100px;
+	display: inline-block;
+}
+
+
+/*
+buttons
+*/
+
+.btn {
+	border: none;
+	padding: 15px 30px; /* 15px = top, bottom, =left, right*/
+	font-size: 14px;
+	border-radius: 5px; /*removes edges*/
+	color: white;
+}
+
+.btn-blue {
+	background-color: #09c;
+
+}
+
+.btn-green {
+	background-color: #4caf50;
+
+}
+
+/*
+images
+*/
+.img-set-holder{
+	text-align: center;
+}
+
+.img-set {
+	height: 100px; /*define to maintain aspect ratio of images*/
+	/*width: 100px;*/
+	padding: 5px; /*targets all sides*/
+	background-color: #fff;
+	border-radius: 3px;
+	margin: 0 5px;
+}
+
+/*
+post
+*/
+#postTitle,
+#postContent {
+	border-radius: 3px;
+	width: 100%;
+	padding: 10px;
+}
+
+#postTitle {
+	margin-bottom: 20px;
+}
+
+#postContent {
+	height: 100px;
+	margin-bottom: 10px;
+
+}
+
