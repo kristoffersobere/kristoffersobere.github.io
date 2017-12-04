@@ -1,0 +1,250 @@
+/* 
+
+
+css reset */
+* {
+	/*removes deafault paddings and margin*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*to avoid overflow*/
+
+}
+
+body	{
+	background-color: lightgrey;
+
+}
+
+.wrapper	{	
+	width: 80%;
+	margin : 0 auto; /*to center wrapper*/
+	background-color: #fff;
+
+}
+
+/*div {
+	padding: 20px;
+}*/
+
+.grandparent	{
+	background-color: skyblue;
+	width: inherit; /*refer to parent wrapper*/
+	position: fixed;
+	bottom: 0;
+
+}
+
+.parent	{
+	background-color: pink;
+	position: relative;	
+	/*width: 100%; refer to grandparent'w widths*/
+}
+
+p {
+	/*position: static;*/ 	/*default*/
+	/*margin-left: 50px;
+	margin-top: -20px;*/
+}
+
+input[name="submit"]	{ 
+	margin-left: 20px;
+
+}
+
+strong {
+	background-color: yellow;
+	position: absolute;
+	top: 10px;
+	left: 10px;	
+
+}
+
+/*page 2*/
+
+h1	{
+	background-color: grey;
+	padding: 10px;
+	position: fixed;
+	z-index: 1; /*will push element on firstlayer*/
+	width: inherit;
+}
+
+main.wrapper > p {
+	height: 1000px;
+	background-color: #efefef;
+	position: relative;
+	top: 70px;
+
+}
+
+/*page 3*/
+
+/*div {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	position: absolute;
+}*/
+
+.blue {
+	background-color: blue;
+	top: 20px;
+	left: 20px;
+	z-index: 1;
+}
+
+.yellow {
+	background-color: yellow;
+	top: 40px;
+	left: 40px;
+	z-index: 0;
+}
+
+.orange {
+background-color: orange;
+	top: 60px;
+	left: 60px;
+	z-index: 2;
+}
+
+
+/*Page 4*/
+
+/*main.wrapper div {
+	padding: 0;
+	margin: 0;
+}*/
+
+.Menu {
+	height: 100px;
+	background-color: #b2d6ff; /*blue*/
+}
+
+.Sidebar {
+	height: 300px;
+	background-color: #f09a9d; /*red*/
+	width: 20%;
+	float: left; /*posible value either right, none , left*/
+}
+
+/*
+content sec
+*/
+.article-image {
+	width: 300px;
+	/*height: 200px;*/
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+.Content {
+	/*height: 500px;*/
+	padding: 20px;
+	width: 80%;
+	background-color: #f5c58e; /*yellow*/
+	float: right;
+
+}
+
+div.content > p {
+	margin-bottom: 10px;
+}
+
+/*
+Footer
+*/
+
+.Footer {
+	/*height: 200px;*/
+	background-color: #d6e9fe; /*light blue*/
+	clear: both; /*will offset floating effect*/
+
+}
+
+.avatar {
+	width: 60px;
+	height: 60px;
+	background-color: #d630fe;
+	float: left;
+	margin-right: 25px;
+	border-radius: 50%;
+	background-image: url('http://lorempixel.com/60/60');
+}
+
+.username {
+	margin-bottom: 15px;
+}
+
+h3.username + p {
+	overflow: hidden;
+}
+
+.page {
+	/*border: 1px solid red;*/
+	/*height: 500px;*/
+}
+
+/*
+best way to clear floats
+*/
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*
+columns
+*/
+
+.column {
+	background-color: #b2d6ff;
+	height: 160px;
+	width: 31%;
+	margin: 20px 1.16%;
+	/*border: 1px solid red;*/ /*for testing only*/
+	float: left;
+	padding: 15px;	
+	position: relative;
+	/*overflow: hidden;*/
+}
+
+
+/*
+managing text-overflow with multiline support
+*/
+
+.block-with-text {
+	overflow: hidden;
+	position: relative;
+	line-height: 1.2em;  /*em = default font-size, 16px*/
+	max-height: 3.6em;
+	text-align: left;
+	margin-right: -1em;
+	padding-right: 30px;
+}
+.block-with-text:before {
+	content: "...";
+	position: absolute;
+	right: 28px;
+	bottom: 0;
+}
+.block-with-text:after {
+	content: "";
+	position: absolute;
+	right: 17px;
+	width: 1em;
+	height: 1em;
+	margin-top: 0.2em;
+	background-color: #b2d6ff;
+}
+
+.read-more {
+	position: absolute;
+	right: 25px;
+	bottom: 25px;
+}
