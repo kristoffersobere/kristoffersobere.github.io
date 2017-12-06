@@ -65,13 +65,16 @@ header	{
 	width: 20%;
 	height: 100%;
 	z-index: 9999;
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
 }
 
 div.image {
 	background-color: darkgrey;
-	background-image: url('http://lorempixel.com/1000/1000');
+	background-image: url('http://lorempixel.com/1000/1000/');
 	background-size: cover;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 
 	/*height: 190px;
 	width: 190px;*/ /*for fixed size*/
@@ -81,9 +84,9 @@ div.image {
 	margin: 20px auto 0;
 	border-radius: 10%;
 	border: 3px solid #eee;
-	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-	-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+	-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
 div.image:hover {
@@ -108,6 +111,7 @@ main > div.container {
 div.home {
 	height: 700px;
 	background-color:  #666666;
+	background-image: url('../img/head.jpg');
 	width: inherit;
 }
 
@@ -122,12 +126,12 @@ div.home:hover {
 
 div.about {
 	height: 600px;
-	background-color: #999967;
+	background-color: #666666;
 }
 
 div.about:hover {
 	height: 600px;
-	background-color:   #999967;
+	background-color:   #666666;
 	width: inherit;
 	opacity: 0.9;
 }
@@ -200,6 +204,7 @@ div.gallery > h3 {
 }
 
 div.content {
+	background-color: #666666;
 	width: 35%;
 	border: 5px solid white;
 	position: relative;
