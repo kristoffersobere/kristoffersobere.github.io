@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav.navbar {
+ 	background-color: grey;
+}
+
+div.container {
+	padding: 15%;
+}
+
+div.input-groups {
+	margin: 10px;
+}
+
+div.footer {
+		bottom: 0;
+		position: absolute;
+	}
+
+/*mobile devices*/
+@media only screen and (max-width: 480px) {
+	nav.navbar {
+ 	 	background-color: grey;
+}
+
+
+/*table devices*/
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+	
+}
+
+
+/*desktop*/
+@media only screen and (min-width: 961px) {
+
+	
+
+
+}
