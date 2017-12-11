@@ -6,11 +6,16 @@
 
 nav.navbar {
  	background-color: grey;
+
+ 	/* background: rgb(54, 25, 25); 
+    background: rgba(54, 25, 25, .5);*/
 }
 
 div.container {
+	
 	padding: 15%;
 }
+
 
 div.input-groups {
 	margin: 10px;
@@ -19,7 +24,23 @@ div.input-groups {
 div.footer {
 		bottom: 0;
 		position: absolute;
+		
 	}
+
+div.container1 {
+	background-image: url('../img/lumen.jpg');
+	background-attachment: inherit;
+	background-size: cover;
+	height: auto;
+}
+
+div.welcome {
+	background-color: #000;
+	color: #fff;
+
+	 background: rgb(54, 25, 25); 
+    background: rgba(54, 25, 25, .5);
+}
 
 /*mobile devices*/
 @media only screen and (max-width: 480px) {
