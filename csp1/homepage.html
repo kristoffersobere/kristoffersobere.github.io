@@ -9,6 +9,7 @@
 
   <!--googlefonts  -->
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
 
 	<!-- import bootstrap -->
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
@@ -17,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-<body>
+<body>  
 
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -28,20 +29,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""> 
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""> 
 
         </a>
-        <a class="navbar-brand" href="#"> <div class="logo col-xs-12"><span>FELICIOOO</span></div>
+        <a class="navbar-brand" href="index.html"> <div class="logo col-xs-12"><span>SPOONFORK</span></div>
 
         </a>
       </div><!-- /navbar -->
       <div id="navbar2" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class=""><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li class=""><a href="homepage.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
           <li><a href="#">Contact</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -58,7 +59,11 @@
     </div>
     <!--/.container-fluid -->
 
-    <!--carousel  -->
+    
+
+  </nav><!-- navbar -->
+
+  <!--carousel  -->
     <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
       <!-- Overlay -->
       <div class="overlay"></div>
@@ -105,20 +110,54 @@
     </div>
     <!-- /caroulse -->
 
-  </nav><!-- navbar -->
 
-<section id="event">
-    <div class="bg-color" class="section-padding">
-      <div class="container">
+
+
+<section id="event" class="section-padding">
+  <div class="container-homepage">
+      <div class="row">
+        <div class="col-md-12 text-center ">
+          <h2 class="header-h">UpComing Event</h2>
+          
+        </div>
+
+        <div class="col-md-1"></div>
+        <div class="col-md-10 ">
+
+           <div class="col-md-6 col-sm-6">
+            <img src="img/lumen.jpg" alt="" class="img-responsive">
+          </div>
+
+          <div class=" col-md-6 col-sm-6">
+            <div class="bg-color  section-padding">
+              <div class="details-text">
+                <h2>siomai party</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
+                  
+                  <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a>
+              </div>
+            </div>
+          </div>
+
+         
+
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+   <!--  <div class="bg-color" class="section-padding">
+      
         <div class="row">
-          <div class="col-xs-12 text-center" ><!--  style="padding:60px;" -->
+          <div class="col-xs-12 text-center" >
             <h2 class="header-h">Up Coming events</h2>
            
           </div>
-          <div class="col-md-12" >  <!-- style="padding-bottom:60px;" -->
+          <div class="col-md-1"></div>
+          <div class="col-md-10 col-lg-10" >  
             <div class="item active left">
               
-              <div class="col-md-6 col-sm-6 details-text">
+              <div class="col-md-6 col-sm-6 col-md-6 col-lg-6 details-text">
                 <div class="content-holder">
                   <h2>siomai party</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
@@ -133,36 +172,35 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> -->
+   
   </section>
   
+<div class="parallax2"></div>
 
-
-  <div class="container2 homepage"> 
-     <div class="parallax2"></div>
+  <section>
+   
 
    <section id="fdish" class="section-padding">
-    <div class="container">
+    <div class="container-homepage">
       <div class="row">
-        <div class="col-md-12 text-center marb-35">
+        <div class="col-md-12 text-center ">
           <h2 class="header-h">Featured Dish</h2>
           
         </div>
 
-
         <div class="col-md-1"></div>
-        <div class="col-md-10 well well-lg">
+        <div class="col-md-10 ">
           <div class=" col-md-6 col-sm-6">
-            <div class="about-info well">
-              <h2 class="heading">Egg</h2>
-              <div class="details-list">
-                <ul>
-                  <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                  <li><i class="fa fa-check"></i>Quisque finibus eu lorem quis elementum</li>
-                  <li><i class="fa fa-check"></i>Vivamus accumsan porttitor justo sed </li>
-                  <li><i class="fa fa-check"></i>Curabitur at massa id tortor fermentum luctus</li>
-                </ul>
+            <div class=" bg-color panel">
+              <h2 class="heading text-center">Egg</h2>
+              <div class="details-list details-text">
+               
+                  <p><i class="fa fa-check"></i>Lorem ipsum dolor sit amet, consectetur </p>
+                  <p><i class="fa fa-check"></i>Quisque finibus eu lorem quis elementum</p>
+                  <p><i class="fa fa-check"></i>Vivamus accumsan porttitor justo sed</p></p>
+                  <p><i class="fa fa-check"></i>Curabitur at massa id tortor fermentum luctus</p>
+                
               </div>
             </div>
           </div>
@@ -177,16 +215,16 @@
 
     <div class="parallax"></div>
 
-<!-- carou2 -->
-    <div id="myCarousel" class="carousel slide col-xs-12" data-ride="carousel">
-        <!-- Indicators -->
+<!-- carou2 --> <!-- optional for comment slied -->
+    <!-- <div id="myCarousel" class="carousel slide col-xs-12" data-ride="carousel">
+      
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
+    
         <div class="carousel-inner well well-lg " >
           <div class="item active col-xs-12 col-sm-12 col-md-8 col-lg-4" style="color: black;">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
@@ -203,7 +241,7 @@
           </div>
         </div>
 
-        <!-- Left and right controls -->
+        
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left"></span>
           <span class="sr-only">Previous</span>
@@ -212,32 +250,30 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div><!-- carou -->
+      </div> -->
+      <!-- carou -->
 
  <!-- footer -->
-  <footer class="footer text-center">
-    <div class="footer-top">
+   <div class="parallax">
+  <footer class="footer text-center">  
       <div class="row">
         <div class="col-md-offset-3 col-md-6 text-center">
           <div class="widget">
             <h4 class="widget-title">FELICOUS</h4>
             <address>123 Commonwealth<br>QC, PH</address>
-            <div class="social-list clear-float">
-              <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+            <div class="icons">
+              <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a>
             </div>
-            <p class="copyright">
-              Disclaimer : No copyright infringement is intended. This is only for educational purposes and not for profit. Some asset/s used are not owned by the developer/s unless otherwise stated; the credit goes to the owner.
-            </p>      
-
           </div>
         </div>
-      </div>
-    </div>
+      </div><!-- row -->
   </footer>
   <!-- / footer -->
 
-
+ </div>
 
        
 
@@ -252,7 +288,7 @@
 
     </footer> -->
 
-  </div><!-- /container homepage -->
+  </section><!-- /section -->
 
   <!-- Imports Font Awesome icons -->
   <script src="https://use.fontawesome.com/c5d1608731.js"></script>
