@@ -192,7 +192,7 @@ div#myCarousel {
     background-image: url('../img/para.jpg');
 
   
-    height: 150px; 
+    height: 165px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -207,6 +207,20 @@ div#myCarousel {
 
   
     height: 50px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+   
+    background-image: url('../img/para.jpg');
+
+  
+    height: 100%; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -244,6 +258,14 @@ div.container1 {
   height: inherit;
 
 }*/
+
+div.contactcontent {
+  background-image: url('../img/para.jpg');
+  height: auto;
+  background-attachment: fixed;
+  background-size: cover;
+  height: inherit;
+}
 
 
 div.aboutcontent {
@@ -335,6 +357,10 @@ img.img-chef {
         font-size: 35px;
         color: #fff;
 }
+.header-h-b {
+        font-size: 35px;
+        color: #000;
+}
 .header-p, body{
         font-size: 14px;
 }
@@ -342,6 +368,12 @@ img.img-chef {
    /* border-right: 2px solid #841b2d;*/
     padding: 20px 20px 30px 30px;
     overflow: auto;
+}
+.details-text-format-b {
+   /* border-right: 2px solid #841b2d;*/
+    padding: 20px 20px 30px 30px;
+    overflow: auto;
+    color: #000;
 }
 .details-text {
     background-color: rgba(14, 4, 4, 0.70);
@@ -413,6 +445,21 @@ img.img-chef {
   margin:5px 0%;
 }
 
+  div.about-head {
+  margin: 0;
+
+  }
+
+  div.contactcontent {
+
+  padding: 0 0%;
+
+}
+
+div.contactdetails {
+  padding: 0 ;
+}
+
 
 
 
@@ -431,12 +478,20 @@ img.img-chef {
   }
 
 div.panel-about {
-    margin: 0;
+    margin: 0 0 8%;
   }
  div.about-head {
-   margin: 5% 30%;
+   margin: 4% 0;
 
   }
+
+div.contactcontent {
+  background-image: url('../img/para.jpg');
+  padding-top: 10%;
+  min-height: 1150px;
+  
+}
+
 
  /*#event{
     background: url('../img/lumen.jpg') no-repeat;
@@ -474,33 +529,5 @@ div.panel-about {
   div.containerhomepage {
   
   }
-
- /* nav {
-  position: fixed;
-  height: 20%
-  }
-
-  nav.navbar {
-
-  background-color: #000;
-
-
-  }
-
-  .navbar-brand {
-  padding: 0px;
-  color: white;
-  }
-  .navbar-brand>img {
-  height: 100%;
-  padding: 7px 15px;
-  width: auto;
-  border-radius: 50px;
-
-  }*/
-
-  
-
-
 
 }
