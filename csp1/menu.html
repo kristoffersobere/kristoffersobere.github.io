@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" charset="IE=Edge">
 	
-	<title>X-Resto</title>
+	<title>SPOONFORK | Menu</title>
 
   <!--googlefonts  -->
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
@@ -19,7 +19,7 @@
 </head>
 <body>  
 
-
+<div class="menucontent">
   <nav class="navbar navbar-inverse"><!-- nav -->
     <div class="container-fluid">
       <div class="navbar-header">
@@ -40,17 +40,14 @@
         <ul class="nav navbar-nav navbar-right">
           <li class=""><a href="homepage.html">Home</a></li>
           <li><a href="aboutus.html">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contactus.html">Contact</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="menu.html">Breakfast</a></li>
+              <li><a href="menu.html">Lunch</a></li>
+              <li><a href="menu.html">Dinner</a></li>
+       
             </ul>
           </li>
         </ul>
@@ -61,17 +58,22 @@
   </nav><!-- navbar -->
 
 <!-- menu pics -->
-<section class="menupics">
+<section class="">
   <div class="container-fluid">
     <div class="row">
-      <div class="categories">
+      <div class="categories panel-menu text-center bg-color2">
+        <div class="heading">
+          <h3>Menu</h3>
+          <hr class="style">
+        </div>
         <ul class="cat">
+
           <li>
-            <ol class="type">
-              <li><a href="#" data-filter="*" class="active">All</a></li>
-              <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
-              <li><a href="#" data-filter=".lunch">Lunch</a></li>
-              <li><a href="#" data-filter=".dinner">Dinner</a></li>
+            <ol class="">
+              <li><a href="#" data-filter="*" class="active menulist">All</a></li>
+              <li><a href="#" data-filter=".breakfast" class="menulist">Breakfast</a></li>
+              <li><a href="#" data-filter=".lunch" class=" menulist">Lunch</a></li>
+              <li><a href="#" data-filter=".dinner" class="menulist">Dinner</a></li>
             </ol>
           </li>
         </ul>
@@ -79,125 +81,151 @@
       </div>
     </div>
     <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+      <div class=" portfolio-items text-center menupics bg-color">
+
+       <!--  <div class=" col-xs-12 col-sm-12 col-md-4  breakfast  text-center  bg-color2 ">
+          <div class="hovereffect">
+            <img class="img-responsive" src="img/lumen.jpg" alt="">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div> -->
+        <div class="panel-menu  panel col-xs-12 col-sm-6 col-md-6   dinner  text-center  bg-color2">
+          <div class="portfolio-item ">
+             <div class="hover-bg"> 
+              
+
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Chicken</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-             <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
+
+        <div class="panel-menu  panel col-xs-12 col-sm-6 col-md-6   breakfast  text-center  bg-color2 ">
+          <div class="portfolio-item ">
+            <div class="hover-bg">
+           
+
+               <div class="hover-text">
+                <h4>salad</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
+        <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   breakfast  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+              
+               <div class="hover-text">
+                <h4>fish</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-             <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+        <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   lunch  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+
+             
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Fillet</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+
+        <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   lunch  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+
+
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Burger</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+
+         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   lunch  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+
+
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Candy</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+
+         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   breakfast  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+
+
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Burger</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-           <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+
+         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   breakfast  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+
+
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Burger</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+
+         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   dinner  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+
+
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Burger</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-             <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+
+         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-6   dinner  text-center  bg-color2">
+          <div class="portfolio-item ">
+            <div class="hover-bg"> 
+
+
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Burger</h4>
               </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-             <div class="hover-bg"> <a href="img/lumen.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/lumen.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
+            
+       
+       
       </div>
     </div>
-  </div><!-- /menupics -->
+    </div>
+  </div><!-- /rows -->
 
+<!-- 
+<div class="parallax"></div> -->
 
 
   <!-- menu -->
-  <div class="container-fluid">
+ <!--  <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-12">
         <div class="menu-section">
           <h2 class="menu-section-title">Breakfast & Starters</h2>
           <hr>
@@ -304,15 +332,20 @@
         </div>
       </div>
     </div>
-  </div><!-- /menu -->
+  </div> --><!-- /menu -->
+
+</div><!-- /divmenucontent -->
+
+<div class="parallax4"></div>
 
     <!-- footer -->
+<div class="parallax4">
   <footer class="footer text-center">
     <div class="footer-top">
       <div class="row">
         <div class="col-md-offset-3 col-md-6 text-center">
           <div class="widget">
-            <h4 class="widget-title">FELICOUS</h4>
+            <h4 class="widget-title">SPOONFORK</h4>
             <address>123 Commonwealth<br>QC, PH</address>
             <div class="">
               <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
@@ -325,9 +358,9 @@
       </div>
     </div>
   </footer>
-
+<!-- / footer -->
+  </div><!-- para -->
   
-  <!-- / footer -->
 
 
 
