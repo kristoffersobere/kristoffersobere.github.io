@@ -8,7 +8,8 @@
 	<title>SPOONFORK | Menu</title>
 
   <!--googlefonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  
 
   <!-- import bootstrap -->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
@@ -20,34 +21,38 @@
 <body>  
 
 <div class="menucontent">
-  <nav class="navbar navbar-inverse"><!-- nav -->
+   <!-- nav -->
+   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""> 
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-        </a>
-        <a class="navbar-brand" href="index.html"> <div class="logo col-xs-12"><span>SPOONFORK</span></div>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+        <a class="navbar-brand" href="index.html"> 
+        <div class="logo col-xs-12">
+          <span>SPOONFORK</span>
+        </div><!--  -->
+        </a><!-- /a -->
+        </div><!-- /navbar -->
 
-        </a>
-      </div><!-- /navbar -->
       <div id="navbar2" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class=""><a href="homepage.html">Home</a></li>
           <li><a href="aboutus.html">About</a></li>
           <li><a href="contactus.html">Contact</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Menu <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="menu.html">Breakfast</a></li>
               <li><a href="menu.html">Lunch</a></li>
               <li><a href="menu.html">Dinner</a></li>
-       
+             
             </ul>
           </li>
         </ul>
@@ -55,21 +60,21 @@
       <!--/.nav-collapse -->
     </div>
     <!--/.container-fluid -->
-  </nav><!-- navbar -->
+  </nav>
 
 <!-- menu pics -->
 <section class="">
   <div class="container-fluid">
     <div class="row">
-      <div class="categories panel-menu text-center bg-color2">
+      <div class="categories  text-center bg-color2">
         <div class="heading">
-          <h3>Menu</h3>
+          <h2>Menu</h2>
           <hr class="style">
         </div>
-        <ul class="cat">
+        <ul class="cat ">
 
           <li>
-            <ol class="">
+            <ol class="list-inline">
               <li><a href="#" data-filter="*" class="active menulist">All</a></li>
               <li><a href="#" data-filter=".breakfast" class="menulist">Breakfast</a></li>
               <li><a href="#" data-filter=".lunch" class=" menulist">Lunch</a></li>
@@ -81,135 +86,58 @@
       </div>
     </div>
     <div class="row">
-      <div class=" portfolio-items text-center menupics bg-color">
 
-       <!--  <div class=" col-xs-12 col-sm-12 col-md-4  breakfast  text-center  bg-color2 ">
-          <div class="hovereffect">
-            <img class="img-responsive" src="img/lumen.jpg" alt="">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
-            </div>
+      <div class=" portfolio-items panel-menu text-center menupics bg-color">
+        <div class="  col-xs-12 col-sm-12 col-md-10 panel-menu breakfast text-center  bg-color2">
+          <div class="portfolio-item panel-menu-item ">
+             <div class="hovereffect"> 
+              <div class="overlay">
+                <h2>Breakfast & Starters</h2>
+          
+                <p>Egg &#8369;20 petot</p>
+                <p>Hotsilog &#8369;20 petot</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              </div><!-- overlay -->
+              <img src="img/Salad.jpg" class="img-responsive" alt="bfast"> </a> 
+            </div><!-- hover -->
           </div>
-        </div> -->
-        <div class="panel-menu  panel col-xs-12 col-sm-6 col-md-9   dinner  text-center  bg-color2">
-          <div class="portfolio-item ">
-             <div class="hover-bg"> 
+          </div><!-- portitem -->
+        </div><!-- / -->
+
+       <div class=" portfolio-items panel-menu text-center menupics bg-color">
+        <div class="  col-xs-12 col-sm-12 col-md-10 panel-menu lunch text-center  bg-color2">
+          <div class="portfolio-item panel-menu-item ">
+             <div class="hovereffect"> 
+              <div class="overlay">
+                <h2>Lunch</h2>
               
-
-              <div class="hover-text">
-                <h4>Chicken</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
+                <p>Steak - &#8369;125 petot</p>
+                <p>lamb steak - &#8369;1000 petot</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              </div><!-- overlay -->
+              <img src="img/Salad.jpg" class="img-responsive" alt="bfast"> </a> 
+            </div><!-- hover -->
+          </div><!-- portitem -->
         </div>
+        </div><!-- / -->
 
-        <div class="panel-menu  panel col-xs-12 col-sm-6 col-md-9   breakfast  text-center  bg-color2 ">
-          <div class="portfolio-item ">
-            <div class="hover-bg">
-           
-
-               <div class="hover-text">
-                <h4>salad</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   breakfast  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
+       <div class=" portfolio-items panel-menu text-center menupics bg-color">
+        <div class="  col-xs-12 col-sm-12 col-md-10 panel-menu dinner text-center  bg-color2">
+          <div class="portfolio-item panel-menu-item ">
+             <div class="hovereffect"> 
+              <div class="overlay">
+                <h2>Dinner</h2>
               
-               <div class="hover-text">
-                <h4>fish</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   lunch  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
-
-             
-              <div class="hover-text">
-                <h4>Fillet</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-
-        <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   lunch  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
-
-
-              <div class="hover-text">
-                <h4>Burger</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-
-         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   lunch  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
-
-
-              <div class="hover-text">
-                <h4>Candy</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-
-         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   breakfast  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
-
-
-              <div class="hover-text">
-                <h4>Burger</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-
-         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   breakfast  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
-
-
-              <div class="hover-text">
-                <h4>Burger</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-
-         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   dinner  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
-
-
-              <div class="hover-text">
-                <h4>Burger</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-
-         <div class="panel-menu panel  col-xs-12 col-sm-6 col-md-9   dinner  text-center  bg-color2">
-          <div class="portfolio-item ">
-            <div class="hover-bg"> 
-
-
-              <div class="hover-text">
-                <h4>Burger</h4>
-              </div>
-              <img src="img/Salad.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
+                <p>Fillet - &#8369;200 petot</p>
+                <p>Duck Fillet - &#8369;200 petot</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              </div><!-- overlay -->
+              <img src="img/Salad.jpg" class="img-responsive" alt="bfast"> </a> 
+            </div><!-- hover -->
+          </div><!-- portitem -->
+         </div>
+        </div><!-- / -->
+       
             
        
        
@@ -222,117 +150,7 @@
 <div class="parallax"></div> -->
 
 
-  <!-- menu -->
- <!--  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Breakfast & Starters</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Main Course</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Dinner</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $350 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Coffee & Drinks</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --><!-- /menu -->
+  
 
 </div><!-- /divmenucontent -->
 
