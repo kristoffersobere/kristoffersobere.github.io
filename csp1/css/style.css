@@ -347,6 +347,10 @@ div#myCarousel {
 	margin: 10px;
 }*/
 
+div.menucontainer {
+  padding: 10%;
+}
+
 
 div.container1 {
 	background-image: url('../img/lumen.jpg');
@@ -406,11 +410,12 @@ div.menucontent {
   height: inherit;
 }
 
-.menupics {
+/*.menupics {
   background-color: transparent;
+  padding: 0;
 
 }
-
+*/
 div.about-head {
 
   background: rgb(54, 25, 25); 
@@ -430,6 +435,8 @@ div.aboutwrapper {
 }
 
 .panel-menu {
+
+  margin: 0;
   background-color: red;
   background: rgb(54, 25, 25); 
   background: rgba(25, 0, 50, .6);
@@ -633,7 +640,7 @@ div.contactdetails {
   }
 
   div.panel-menu {
-  margin:3% 10%;
+  margin:3% 20%;
 }
 
 div.panel-about {
