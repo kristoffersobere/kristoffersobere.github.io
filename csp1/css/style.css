@@ -3,6 +3,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+ 
+  
+  
 }
 
 
@@ -12,6 +15,7 @@ body {
 	background-color: #000;
 	color: #fff;
   font-family: 'Anton', sans-serif;
+  overflow-x: hidden;
 }
 
 a.menulist {
@@ -223,7 +227,7 @@ div#myCarousel {
     background-image: url('../img/q.jpg');
 
   
-    height: 170px; 
+    height: 214px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
