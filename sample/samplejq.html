@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample javascript</title>
+	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+
+	<h1 id="heading">Sample Jquery</h1>
+
+	<!--1 <button id="btn" >hello</button> -->
+	<input type="text" name="" id="input"> <br>
+
+	<button id="btn_hide" >hide</button>
+	<button id="btn_show" >show</button>
+	<button id="btn_toggle" >toggle</button>
+	<button id="btn_style_color" >change color heading</button>
+
+	<button id="btn_changetext" >add</button>
+
+
+
+	<button class="btn_change">apple</button>
+	<button class="btn_change">banana</button>
+	<button class="btn_change">orange</button>
+
+	<button id="btn_style" >change height</button>
+	<button class="btn_bgcolor" >red</button>
+	<button class="btn_bgcolor" >blue</button>
+	<button class="btn_bgcolor" >green</button>
+	
+	<div id="bg">
+	<img id="imgsrc" src="img/apple.jpg">
+	</div>
+	
+	
+
+	<script type="text/javascript">
+
+		//0$('#heading').html("jqyeru")	
+		//0$("h1").hide()
+
+		//0document.getElementById("btn").onclick = function() {
+		//0	alert("hello")
+		//0}
+
+		
+
+		//1 $('#btn').click(function(){
+		//1 	alert("hello")
+		//1 })
+
+		$('.btn_change').click(function(){
+
+			var imgg = ""
+
+			switch ($(this).html()){
+				case "apple": 
+				imgg = "img/apple.jpg"
+				break
+
+				case "banana": 
+				imgg = "img/banana.jpg"
+				break
+
+				case "orange": 
+				imgg = "img/orange.jpg"
+				break
+			}
+
+			$('#imgsrc').attr("src",imgg)
+		})
+
+		$('.btn_bgcolor').click(function(){
+
+			var bg = ""
+
+			switch ($(this).html()){
+				case "red": 
+				bg = "red"
+				break
+
+				case "blue": 
+				bg = "blue"
+				break
+
+				case "green": 
+				bg = "green"
+				break
+			}
+
+			$('#bg').css("background-color",bg)
+		})
+
+		$('#btn_style').click(function(){
+			$('#imgsrc').css({ "height":"300px", "width" : "150px" })
+			//$('#imgsrc').css('height','150px')
+	
+		})
+
+		$('#btn_style_color').click(function(){
+			$('#heading').css({"color":"red","font-size":"100px"})
+		})
+
+
+
+		$('#btn_hide').click(function(){
+			$('#heading').hide();
+		})
+
+		$('#btn_show').click(function(){
+			$('#heading').show();
+		})
+
+		$('#btn_toggle').click(function(){
+			$('#heading').toggle();
+		})
+
+		$('#btn_changetext').click(function(){
+			//var x = $('#heading').html(); + $('#input').val();
+			//$('#heading').html($('#heading').html()+ $('#input').val()) 
+
+			$('#heading').append($('#input').val())
+			
+		})
+
+
+
+
+
+		
+	</script>
+	
+
+
+</body>
+
+
+</html>

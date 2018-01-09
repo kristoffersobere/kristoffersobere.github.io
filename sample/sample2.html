@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample javascript</title>
+
+
+</head>
+<body>
+
+	<h1>Sample JS Day 2</h1>
+
+	<p>
+		Enter a number in the input box, and evaluate if the number is a multiple of 3 and 5. if not, check if its a multiple of 3, or a multiple of 5.
+	</p>
+
+	<input type="number" name="" id="input">
+
+	<button onclick="eval()">Click me!</button>
+
+	<script type="text/javascript">
+
+		function eval() {
+
+		var x = parseInt(document.getElementById('input').value);
+
+		var y = x%3;
+
+		var z = x%5;
+
+		var c = x%2;
+		
+		if (y ==0 && z == 0 && c == 0 ) {
+		console.log(x+ " is even and multiple of 3 and 5");
+		}
+		if (y ==0 && z == 0 && c !=0  ) {
+		console.log(x+ " is odd and multiple of 3 and 5");
+		}
+		else if (y == 0 && z != 0 && c == 0) {
+		console.log(x+ " is even and multiple of 3 but not 5");
+		}
+		else if (y == 0 && z != 0 && c != 0) {
+		console.log(x+ " is odd and multiple of 3 but not 5");
+		}
+		else if (y != 0 && z ==0 && c ==0) {
+		console.log(x+ " is even and multiple of 5 but not 3");	
+		}
+		else if (y != 0 && z ==0 && c != 0) {
+		console.log(x+ " is odd and multiple of 5 but not 3");	
+		}
+
+		else if (y != 0 && z !=0 && c == 0){
+		console.log(x+ " is even and not multiple of 3 or 5")
+		}
+
+		else if (y != 0 && z !=0 && c != 0){
+		console.log(x+ " is odd and not multiple of 3 or 5")
+		}
+		
+		}
+		
+	</script>
+
+
+
+</body>
+
+
+</html>

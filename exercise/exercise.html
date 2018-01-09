@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise js</title>
+	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+
+
+</head>
+<body>
+
+	<h1>Exercise</h1>
+	<br>
+	<br>
+
+	<div>
+		<h1 id="heading">Simple Quiz</h1>
+		<div id="imgmky" hidden=""> <img src="img/monkey.gif"></div>
+		<div id="imgbrain" hidden=""> <img src="img/brain.gif"></div>
+	</div>
+	<br>
+	<br>
+	<div class="questions">
+		<p>press next to start</p>
+	</div>
+	<div class="questions">
+		<p>1. Where were the Olympic Games held in 1996 ?</p>
+		<form class="options">
+			<label class="hayop"><input class="option" type="radio" name="question1" value=0>Moscow<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question1" value=0>Philippines<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question1" value=1>Atlanta<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question1" value=0>New York</br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>2. What is the national sport in Japan?</p>
+		<form class="options">
+			<label class="hayop"><input class="option" type="radio" name="question2" value=1>Sumo Wrestling<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question2" value=0>Baseball<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question2" value=0>Football<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question2" value=0>Basketball<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>3. In which country were the first Olympic Games held?</p>
+		<form class="options">
+			<label class="hayop"><input class="option" type="radio" name="question3" value=0>England<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question3" value=0>Rome<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question3" value=0>Italy<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question3" value=1>Greece<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>4. What is the profession of Popeye?</p>
+		<form>
+			<label class="hayop"><input class="option" type="radio" name="question4" value=0>Navy<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question4" value=0>Accountant<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question4" value=1>Seaman<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question4" value=0>Army<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>5. Who was the first president of the USA?</p>
+		<form>
+			<label class="hayop"><input class="option" type="radio" name="question5" value=1>George Washington<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question5" value=0>John Adams<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question5" value=0>Abrahm Lincoln<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question5" value=0>Lebron James<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>6. What team won the very first NBA game?</p>
+		<form>
+			<label class="hayop"><input class="option" type="radio" name="question6" value=0>Chicago Stags<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question6" value=0>Toronto Huskies<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question6" value=1>New York Knicks<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question6" value=0>LA Lakers<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>7. Who was the first player in NBA history to be elected league MVP by a unanimous vote?</p>
+		<form>
+			<label class="hayop"><input class="option" type="radio" name="question7" value=1>Stephen Curry<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question7" value=0>Lebron James<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question7" value=0>Wilt Chamberlain<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question7" value=0>Nick Young<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>8. What team owns the longest winning streak in NBA history?</p>
+		<form>
+			<label class="hayop"><input class="option" type="radio" name="question8" value=0>Miami Heat<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question8" value=0>Chicago Bulls<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question8" value=0>Golden State Warriors<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question8" value=1>LA Lakers<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>9. Who scored the first three-point basket in NBA history?</p>
+		<form>
+			<label class="hayop"><input class="option" type="radio" name="question9" value=1>Chris Ford<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question9" value=0>Larry Bird<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question9" value=0>Larry Johnson<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question9" value=0>Stephen Curry<br></label>
+		</form>
+	</div>
+	<div class="questions">
+		<p>10. Who was the youngest player to score 10,000 points in the NBA?</p>
+		<form>
+			<label class="hayop"><input class="option" type="radio" name="question10" value=0>Kobrick Bryant<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question10" value=0>MJ<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question10" value=0>Brian Scalabrine<br></label>
+			<label class="hayop"><input class="option" type="radio" name="question10" value=1>Lebron James<br></label>
+		</form>
+	</div>
+
+	
+
+	<br>
+	<input class="btn" type="button" id='next' value="Next" onlick="sum_values()">
+	<input  class="btn " type="button" id="again" value="Again" onClick="window.location.reload()" hidden="">
+
+	<script type="text/javascript">
+
+		/*thanks stackoverflow*/
+		function sum_values(){
+			var the_sum = 0;
+			for (question in answers){
+				the_sum = the_sum + parseInt(answers[question])
+			}
+			return the_sum
+		}
+
+
+
+		$(document).ready(function(){
+			answers = new Object();
+			$('.option').change(function(){
+				var answer = ($(this).attr('value'))
+				var question = ($(this).attr('name'))
+				answers[question] = answer
+			})
+			var item1 = document.getElementById('questions');
+
+			var totalQuestions = $('.questions').length;
+			var currentQuestion = 0;
+			$questions = $('.questions');
+			$questions.hide();
+			$($questions.get(currentQuestion)).fadeIn();
+			$('#next').click(function(){
+				$($questions.get(currentQuestion)).fadeOut(function(){
+					currentQuestion = currentQuestion + 1;
+					if(currentQuestion == totalQuestions){
+						var result = sum_values()
+               //do stuff with the result
+               $('#next').hide();
+               $('#again').show();
+               
+               			if (result<=7) {
+               				$('#heading').html("Yey! You're monkey, Your Score is " +result);
+               				$('#imgmky').show();
+               			}else{
+               				$('#heading').html("Wow!, Your Score is " +result);
+               				$('#imgbrain').show();
+               			}
+              		 
+           }else{
+           	$($questions.get(currentQuestion)).fadeIn();
+           }
+       	   });
+
+		   });
+		});
+
+
+		
+
+		
+	</script>
+
+
+
+</body>
+
+
+</html>

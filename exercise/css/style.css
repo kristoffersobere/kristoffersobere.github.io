@@ -1,0 +1,43 @@
+* {
+	/*removes deafault paddings and margin*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*to avoid overflow*/
+
+}
+
+body	{
+	background-color: lightgrey;
+	font-family: 'Archivo Black', sans-serif;
+	text-align: center;
+	padding-top: 10%;
+}
+
+.btn {
+	border: none;
+	padding: 15px 30px; 
+	font-size: 14px;
+	border-radius: 5px; 
+	background-color: #09c;
+	color: white;
+}
+
+.btn:hover {
+
+	color: black;
+
+}
+.btn:active {
+
+	padding: 2%;
+
+}
+
+.hayop:hover {
+	color: green;
+	font-size: 150%;
+}
+
+
+
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample javascript</title>
+
+
+</head>
+<body>
+
+	<h1>Sample JS Day 2</h1>
+
+	<p>
+		BMI computation
+	</p>
+
+
+
+	<select id="wgt" onclick="weightselector()">
+		<option>kg</option>
+		<option>lbs</option>
+	</select>
+
+	<input type="number" name="" id="input" ><br>
+
+	<select id="hgt" onclick="heightselector()">
+		<option>m</option>
+		<option>in</option>
+	</select>
+
+	<input type="number" name="" id="input2" ><br><br>
+
+	<button onclick="comp()">Click me!</button>
+
+	<div id="area" style="text-align: center;"></div>
+
+	<input type="number" id="input3"> <button onclick="loopme()">loop me</button>
+
+	<script type="text/javascript">
+
+
+
+	
+
+		function weightselector(){
+			var wg = document.getElementById("wgt").value;
+			var kg = document.getElementById('input').value;
+			
+			
+
+		
+			if (wg == "lbs") {
+				var fkg = kg *  0.453592;
+
+				return fkg;
+				
+				
+
+			}else{
+				var fkg = kg *1;
+				return fkg;
+				}
+
+		}
+
+		function heightselector(){
+			var mg = document.getElementById("hgt").value;
+		
+			var hg = document.getElementById('input2').value;
+			
+
+		
+			if (mg == "in") {
+				var fhg = hg * 0.0254;
+
+				return fhg;
+
+				
+
+			}else{
+				var fhg = hg * 1;
+				return fhg;
+				}
+
+		}
+
+
+		function comp() {
+			var ffkg = weightselector();
+
+			var ffhg = heightselector();
+
+			var bmi = ffkg/(ffhg*ffhg)
+
+			if (bmi < 18.5) {
+				console.log(bmi.toFixed(1)+ " is underweight");
+			}
+			else if (bmi >= 18.5 && bmi <= 24.9) {
+				console.log(bmi.toFixed(1)+ " is normal weight");
+			}
+			else if (bmi >= 25 && bmi <= 29.9) {
+				console.log(bmi.toFixed(1)+ " is overweight");
+			}
+			else if (bmi > 30) {
+				console.log(bmi.toFixed(1)+ " is obesity");
+			}
+			
+
+			
+
+		}
+		
+		/*var x = 0;
+
+		var even = 0;
+
+		var odd = 0;
+		
+
+		while (x <=50) {
+			if (x%2 == 0) {
+				even+=x;
+			}
+			if (x%2 !=0) {
+				odd+=x;
+			}
+
+			
+			x++;
+
+		}
+		alert("sum of even " +even+ "\nsum of odd "+odd);*/
+
+		var colors = [
+			"Red",
+			"Orange",
+			"Yellow",
+			"Green",
+			"Violet",
+			"Indigo",
+			"Blue"
+		];
+
+		//console.log(colors[0]+", "+colors[1]+", "+colors[2]+", "+colors[3]+", "+colors[4]+", "+colors[5]+", "+colors[6])
+
+		/*var x = colors.length-1	;
+		while (x >= 0) {
+			console.log(colors[x]);
+			x--;
+		}*/
+		function loopme() {
+			var a = document.getElementById("input3").value;
+
+			
+
+		for (var x = 0; x < a; x++) {
+
+	
+			
+				for (var y = 0; y < a; y++) {
+					document.getElementById("area").innerHTML += " *";
+
+					console.log("x: "+x+", y:"+y)
+				}
+				document.getElementById("area").innerHTML += "<br> ";
+			
+		}
+
+	}
+
+	</script>
+
+
+
+</body>
+
+
+</html>

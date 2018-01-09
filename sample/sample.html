@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample javascript</title>
+
+	<style type="text/css">
+		
+		.keypad {
+			height: 40px;
+			width: 40px;
+			margin: 2px;
+		}
+	</style>
+</head>
+<body>
+
+
+	<h5 id="heading"></h5>
+
+	<!-- <input type="number" id="input1"><br>
+	<input type="number" id="input2"><br><br> -->
+	Month:<select id="month" onchange="showmonth()">
+		<option selected ">select month</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+	</select>
+
+
+
+	<input type="text" id="input"><br> <br>
+
+	<script type="text/javascript">
+		
+		function showmonth(){
+			var mos = parseInt(document.getElementById("month").value);
+
+
+			var months = [
+		
+			"january",
+			"feb",
+			"march",
+			"april",
+			"may",
+			"june",
+			"july",
+			"august",
+			"sept",
+			"october",
+			"november",
+			"december"
+			]
+
+			console.log(months[mos-1]);
+			
+			/*switch (mos){
+				case 1:
+					console.log("january");
+				break;
+
+				case 2:
+					console.log("feb");
+				break;
+
+				case 3:
+					console.log("march");
+				break;
+
+				case 4:
+					console.log("april");
+				break;
+
+				case 5:
+					console.log("may");
+				break;
+
+				case 6:
+					console.log("june");
+				break;
+
+				case 7:
+					console.log("july");
+				break;
+
+				case 8:
+					console.log("august");
+				break;
+
+				case 9:
+					console.log("sept");
+				break;
+
+				case 10:
+					console.log("oct");
+				break;
+
+				case 11:
+					console.log("nov");
+				break;
+
+				case 12:
+					console.log("december");
+				break;
+
+				default : 
+					console.log("please select month")
+
+			}*/
+
+		}
+	</script>
+
+	
+
+
+	<!-- for input sum -->
+	<!-- <button id="btn" onclick='changeHTML()'> Sum me!</button>
+	<button id="btn" onclick='changeHTML(this.innerHTML)'>click me!</button>
+	<button id="btn2" onclick='changeHTML(this.id)'>click me!</button>
+	<button id="btn3" onclick='changeHTML("hello3")'>click me!</button> -->
+
+	<button class="keypad" onclick="display(this.innerHTML)" >7</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >8</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >9</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >+</button> <br>
+	<button class="keypad" onclick="display(this.innerHTML)" >4</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >5</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >6</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >-</button> <br>
+	<button class="keypad" onclick="display(this.innerHTML)" >1</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >2</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >3</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >/</button> <br>
+	<button class="keypad" onclick="display(this.innerHTML)" >.</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >0</button>
+	<button class="keypad" onclick="calc()" >=</button>
+	<button class="keypad" onclick="display(this.innerHTML)" >*</button><br>
+	<button class="keypad" onclick="clr()">C</button>
+	<button class="keypad" onclick="back()">Back</button>
+	<button class="keypad" onclick="grt()"><5></button>
+	<button class="keypad" onclick="oddeven()">odd/even</button>
+
+	<script type="text/javascript" src="javascript/external.js">
+ 
+		
+	</script>
+
+
+
+</body>
+
+
+</html>
