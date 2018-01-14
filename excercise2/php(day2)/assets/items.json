@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Apple",
+        "description": "apples",
+        "price": 20,
+        "img": "https:\/\/lorempixel.com\/50\/50\/",
+        "category": "fruits"
+    },
+    {
+        "name": "Ampalaya",
+        "description": "this is amplaya",
+        "price": 10,
+        "img": "https:\/\/lorempixel.com\/50\/50\/",
+        "category": "vegestables"
+    },
+    {
+        "name": "Banana",
+        "description": "Banana saging",
+        "price": 50,
+        "img": "https:\/\/lorempixel.com\/50\/50\/",
+        "category": "fruits"
+    },
+    {
+        "name": "Durian",
+        "description": "This is Durian",
+        "price": 45,
+        "img": "https:\/\/lorempixel.com\/50\/50\/",
+        "category": "fruits"
+    },
+    {
+        "name": "Lemon",
+        "description": "Lemon popsicle",
+        "price": 20,
+        "img": "https:\/\/lorempixel.com\/50\/50\/",
+        "category": "fruits"
+    },
+    {
+        "name": "StringBeans",
+        "description": "this is beans",
+        "price": 20,
+        "img": "https:\/\/lorempixel.com\/50\/50\/",
+        "category": "vegestables"
+    }
+]
