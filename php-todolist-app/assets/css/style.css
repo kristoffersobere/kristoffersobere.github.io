@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: skyblue;
+	font-family: 'Anton', sans-serif;
+}
+
+.completed {
+	color:grey;
+	text-decoration: line-through;
+}
+
+.container  {
+  display: flex;
+  
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.bla {
+  padding: 10%;   
+  background-color: red;
+  background: rgb(54, 25, 25); 
+  background: rgba(25, 0, 50, .2);
+}
+
