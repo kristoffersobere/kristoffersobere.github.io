@@ -10,7 +10,7 @@
 
 		echo '<div class="row">';
 
-		echo "<div class='col-xs-4 item_display'><form action='delete.php?index=$index' method='post'><img src='$img'><br>";
+		echo "<div class='col-xs-10 text-center item_display'><form action='delete.php?index=$index' method='post'><img src='$img'><br>";
 		echo "Name: $name<br>";
 		echo "Price: &#8369; $price<br>";
 		echo "<input type='submit' class='btn btn-success' value='Yes'>";

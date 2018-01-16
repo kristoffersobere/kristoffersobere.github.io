@@ -48,7 +48,7 @@ global $items;
 
 			echo "<button class='btn btn-primary render_modal_body'  data-toggle='modal' data-target='#myModal' data-index='$index' >Edit</button>";
 
-			echo "<button class='btn btn-primary render_modal_body_delete'  data-toggle='modal' data-target='#myModaldelete' data-index='$index' >Delete</button>";
+			echo "<button class='btn btn-danger render_modal_body_delete'  data-toggle='modal' data-target='#myModaldelete' data-index='$index' >Delete</button>";
 
 		}elseif (isset($_SESSION['username'])) {
 
