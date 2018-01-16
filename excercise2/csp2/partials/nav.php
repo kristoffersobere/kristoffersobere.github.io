@@ -36,7 +36,7 @@ if(isset($_SESSION['username'])){
       
      
             <?php }else { ?>
-              <li class="waves-effect waves-dark"><a href="#" data-toggle="modal" data-target="#myModal"><span class="fa fa-user"></span> Sign in</a></li>
+              <li class="waves-effect waves-dark"><a href="#" data-toggle="modal" data-target="#ModalSignIn"><span class="fa fa-user"></span> Sign in</a></li>
             <?php } ?>
             </ul>
         
@@ -46,8 +46,8 @@ if(isset($_SESSION['username'])){
     <!--/.container-fluid -->
   </nav>
 
-  <div id="myModal" class="modal fade" role="dialog">
-    <div id="myModal" class="modal-dialog">
+  <div id="ModalSignIn" class="modal fade" role="dialog">
+    <div id="ModalSignIn" class="modal-dialog">
 
     <!-- Modal content-->
       <div class="modal-content">

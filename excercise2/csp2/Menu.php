@@ -24,18 +24,18 @@ global $items;
 	foreach ($categories as $category) {
 		echo $filter == $category ? "<option selected>$category</option>" : "<option>$category</option>";
 
-		
-	
-	
-
-
-
 	}
 	echo "</select><button>Sort By Category</button></form></div>";
 
 	echo "<div class='row'>";
 
 	foreach ($items as $index => $item) {
+
+		$img = $item['img'];
+		$name = $item['name'];
+		$description = $item['description'];
+		$price = $item['price'];
+
 		if ($filter == 'All' || $item['category'] == $filter) {
 		
 		echo "<div class='col-xs-4 item_display'><img src='".$item['img']."'>";
@@ -46,8 +46,9 @@ global $items;
 
 			$username = $_SESSION['username'];
 
-			echo "<a href='edit.php?index=$index'> <button class='btn btn-primary'>Edit</button>
-			</a>";
+			echo "<button class='btn btn-primary render_modal_body'  data-toggle='modal' data-target='#myModal' data-index='$index' >Edit</button>";
+
+			echo "<button class='btn btn-primary render_modal_body_delete'  data-toggle='modal' data-target='#myModaldelete' data-index='$index' >Delete</button>";
 
 		}elseif (isset($_SESSION['username'])) {
 
@@ -56,9 +57,63 @@ global $items;
 		}
 
 		echo "</div>";
+
+		
 		}
 	}
-	echo "</div>";	
+	echo "</div></div>";	
+
+	echo '<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Modal Header</h4>
+			      </div>
+			      <div class="modal-body" id="modal-body">
+			        <div class="row">
+
+	
+
+			     </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+			</div>
+			
+			<!-- Modal2 -->
+			<div id="myModaldelete" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Modal Header</h4>
+			      </div>
+			      <div class="modal-body" id="modal-body-delete">
+			        <div class="row">
+
+	
+
+			     </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+			</div>';
+
+
 }
 
 

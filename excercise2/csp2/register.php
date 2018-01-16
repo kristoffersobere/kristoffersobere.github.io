@@ -94,5 +94,5 @@ function displayContent(){
 require 'template.php'
  ?>
 
-<script type="text/javascript" src="js/externaljs.js"></script>
+<!-- <script type="text/javascript" src="js/externaljs.js"></script> -->
 

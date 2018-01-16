@@ -1,6 +1,14 @@
 <?php 
 if (isset($_SESSION['username'])) {
-    echo "<h4>hello ".$_SESSION['username']."</h4><h3>shopping cart</h3>";
+    echo "<div class='col-lg-2 sidebar'>";
+    echo "<h4>hello ".$_SESSION['username'];
+    if ($_SESSION['username']== 'admin') {
+       echo "<br>nav for admin";
+    }else{
+        echo "<br>Shopping cart";
+    }
+
+    echo "</div>";
 }else {
 ?>
 

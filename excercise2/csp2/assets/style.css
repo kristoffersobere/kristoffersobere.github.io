@@ -14,3 +14,7 @@ div.footer {
     text-align: center;
 
 }
+.sidebar{
+    border: solid 1px;
+    color: grey;
+}

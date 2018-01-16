@@ -10,6 +10,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <!-- import bootstrap -->
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> -->
+
 </head>
 <body>
 	<?php require 'partials/nav.php'; ?>
@@ -18,22 +21,24 @@
 
 <h2><?php echo displayTitle().'<br>' ; ?></h2>
 
-<div class="row">
-	<div class="col-lg-9">
+	<div class="row">
+		<div class="col-lg-10">
 
-	<?php displayContent(); ?>
+			<?php displayContent(); ?>
 
 	
-	</div>
-	<div class="col-lg-3" >
 	
-		<?php require 'partials/sidebar.php';?>
-		
+
+
+	
+			<?php require 'partials/sidebar.php';?>
+		</div>
+
 	</div>
 
+</div>
 
-</div>
-</div>
+<script type="text/javascript" src="js/externaljs.js"></script>
 <?php require 'partials/footer.php'; ?>
 
 </body>

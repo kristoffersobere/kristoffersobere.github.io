@@ -20,7 +20,7 @@
 		var users;
 		$.getJSON("assets/users.json", function(json){
 			users = json
-		})
+		});
 
 		$('input[name=username]').on('input', function(){
 			var username = $('input[name=username]').val()
@@ -31,7 +31,7 @@
 				$('#username_error').css('color','green')
 				$('#username_error').html('available')
 			}
-		})		
+		});	
 
 		//for password validtion jquery
 		$('input[name=cpw]').on('input', function(){
@@ -47,4 +47,21 @@
 				$('#pw_error').css('color','green')
 				$('#pw_error').html('passwords matched')
 			}
-		})
+		});
+
+
+//for ajax modal
+		$('.render_modal_body').click(function(){
+			var index = $(this).data('index');
+			$.post('render_modal_body_endpoint.php',{index : index},function(data){
+				$('#modal-body').html(data);
+			});
+		});
+
+		$('.render_modal_body_delete').click(function(){
+			var index = $(this).data('index');
+			$.post('render_modal_body_endpoint_delete.php',{index : index},function(data){
+				$('#modal-body-delete').html(data);
+			});
+		});
+
