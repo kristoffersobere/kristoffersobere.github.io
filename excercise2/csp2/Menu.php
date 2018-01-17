@@ -7,10 +7,12 @@ $string = file_get_contents("assets/items.json");
 $items = json_decode($string, true);
 
 function displayTitle(){
-	echo 'Menu';
+	echo 'Menu<br>';
+	
 }
 
 function displayContent() {
+
 	
 global $items;
 	$categories = array_unique(array_column($items,'category'));
@@ -28,7 +30,7 @@ global $items;
 	echo "</select><button>Sort By Category</button></form></div>";
 
 	echo "<div class='row'>";
-
+	
 	foreach ($items as $index => $item) {
 
 		$img = $item['img'];
@@ -52,7 +54,9 @@ global $items;
 
 		}elseif (isset($_SESSION['username'])) {
 
-			echo " <button class='btn btn-warning'>Add To Cart</button>";
+			echo "<form action='addtocart.php?index=$index'method='POST'>
+			<input type='number' name='qty' placeholder='Quantity' value='0'><br>";
+			echo " <button class='btn btn-warning'>Add To Cart</button></form>";
 
 		}
 
@@ -61,7 +65,7 @@ global $items;
 		
 		}
 	}
-	echo "</div></div>";	
+	echo "</div>";	
 
 	echo '<!-- Modal -->
 			<div id="myModal" class="modal fade" role="dialog">
@@ -113,12 +117,11 @@ global $items;
 			</div>
 			</div>';
 
-
 }
 
 
 
-require 'template.php'
+require 'template.php';
 
  ?>
 

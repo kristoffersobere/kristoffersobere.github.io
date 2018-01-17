@@ -30,9 +30,10 @@
 	
 
 
-	
-			<?php require 'partials/sidebar.php';?>
-		</div>
+		
+			</div>
+		
+			<?php require 'partials/sidebar.php'; ?>
 
 	</div>
 

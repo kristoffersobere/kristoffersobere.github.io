@@ -13,4 +13,7 @@ $file = fopen("assets/users.json", "w");
 fwrite($file, json_encode($users,JSON_PRETTY_PRINT));
 fclose($file);
 
+echo "<script type='text/javascript'>alert('success')</script>";
+header('location: register.php');
 ?>
+
