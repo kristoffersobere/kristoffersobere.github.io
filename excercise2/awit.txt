@@ -1,0 +1,51 @@
+display album name with atleast 3 songs
+
+select genre, avg(length) from songs group by genre;
+
+select name,count(name) as number_of_songs from albums join songs on (albums.id = songs.album_id) 
+group by name having number_of_songs >3;
+
+SELECT firstName), count(lastName) FROM employees JOIN customers ON (employees.employeeNumber = customers.salesRepEmployeeNumber)
+WHERE country IN (SELECT country FROM offices);
+
+SELECT count(firstName), count(lastName) FROM employees JOIN customers ON (employees.employeeNumber = customers.salesRepEmployeeNumber)
+WHERE country IN (SELECT country FROM offices);
+
+
+SELECT firstName,lastName FROM employees 
+WHERE reportsTo = (select employeeNumber from employees where lastName = 'Bow');
+
+SELECT reporting.firstName,reporting.lastName,boss.firstName,boss.lastName FROM employees AS reporting 
+JOIN employees AS boss ON ( boss.employeeNumber  = reporting.reportsTo)
+WHERE boss.firstName = 'Anthony' AND boss.lastName = 'Bow';
+
+SELECT boss.firstName,boss.lastName,supervisor.firstName,supervisor.lastName FROM employees AS boss
+JOIN employees AS supervisor ON ( boss.reportsTo  = supervisor.employeeNumber)
+WHERE boss.firstName = 'Anthony' AND boss.lastName = 'Bow';
+
+SELECT customerName FROM customers WHERE customerName NOT LIKE  '%a%';
+
+SELECT textDescription From productlines Where textDescription LIKE '%state of the art%';
+
+SELECT customerName FROM customers WHERE country IN ('USA');
+
+SELECT customerName FROM customers WHERE country IN ('USA','france','canada','uk','italy');
+
+SELECT productName,MAX(buyPrice) FROM products WHERE buyPrice = (SELECT MAX(buyPrice) FROM products);
+
+SELECT productName,buyPrice FROM products ORDER BY buyPrice DESC LIMIT 3;
+
+SELECT Count(customerName) FROM customers Where country = 'uk';
+
+//1 SELECT customerNumber, COUNT(customerNumber) FROM orders 
+GROUP BY customerNumber ORDER BY COUNT(customerNumber);
+
+//2 SELECT  customerName From customers WHERE customerNumber = (SELECT customerNumber FROM orders 
+GROUP BY customerNumber ORDER BY COUNT(customerNumber)DESC LIMIT 1);
+
+SELECT c.customerName, SUM(od.quantityOrdered) FROM customers c 
+JOIN orders o ON (c.customerNumber = o.customerNumber)
+JOIN orderdetails od ON (o.orderNumber = od.orderNumber) 
+GROUP BY c.customerName ORDER BY SUM(od.quantityOrdered) DESC LIMIT 5;
+
+
