@@ -8,17 +8,23 @@ function displayContent() {
 	$qtty = $_SESSION['cart'];//session array
 	
 if (isset($qtty)) {
+	require 'db/connection.php';
 
 					//new keys
 	$total = 0;
 	foreach ($qtty as $index => $q) {
-		$string = file_get_contents("assets/items.json");
+/*		$string = file_get_contents("assets/items.json");
 		$items = json_decode($string, true);
+*/
 
-		$img = $items[$index]['img'];
-		$name = $items[$index]['name'];
-		$description = $items[$index]['description'];
-		$price = $items[$index]['price'];
+		$sql = "SELECT * FROM rooms WHERE id = $index";
+		$result = mysqli_query($conn,$sql);
+		$row = mysqli_fetch_assoc($result);
+
+		$img = $row['image'];
+		$name = $row['name'];
+		$description = $row['description'];
+		$price = $row['price'];
 		$subtotal = $price*$q;
 		$total += $subtotal;
 		

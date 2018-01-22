@@ -1,70 +1,59 @@
 <?php 
-//require_once 'items.php'; //replaced
-
-
-
-$string = file_get_contents("assets/items.json");
-$items = json_decode($string, true);
 
 function displayTitle(){
-	echo 'Menu<br>';
+	echo 'Menu';
 	
 }
 
 function displayContent() {
-
+	require 'db/connection.php';
 	
-global $items;
-	$categories = array_unique(array_column($items,'category'));
+	$filter = isset($_GET['category'])? $_GET['category']: 'All';
 	
-	$filter = "All";
-	if (isset($_GET['category'])) 
-	$filter = $_GET['category'];
-
-		echo "<div class='row'><form><select name='category'><option>All</option>";
-
-	foreach ($categories as $category) {
-		echo $filter == $category ? "<option selected>$category</option>" : "<option>$category</option>";
-
+	echo "<form ><select name ='category'><option>All</option>";
+	$sql = "SELECT * FROM categories";
+	$result = mysqli_query($conn,$sql);
+	while ($row = mysqli_fetch_assoc($result)) {
+		$id=$row['id'];
+		$category = $row['name'];
+		echo $filter == $id ? "<option selected value='$id'>$category</option> ":"<option value='$id'>$category</option>";
 	}
-	echo "</select><button>Sort By Category</button></form></div>";
+		echo "</select><button>Search</button></form>";
 
-	echo "<div class='row'>";
+
+		$sql = "SELECT * FROM rooms";
+		$result = mysqli_query($conn,$sql);
+
+		echo "<div class='row'>";
+		while ($item = mysqli_fetch_assoc($result)) {
+			$index = $item['id'];
+		
+			if($filter == 'All'|| $item['category_id'] == $filter){
+			echo "<div class='col-xs-4 item_display'><img src='".$item['image']."'>";
+			echo "<h5>".$item['name']."</h5>";
+			echo "Price: &#8369;".$item['price']."<br>";
+
+			if (isset($_SESSION['username']) && $_SESSION['user_type'] == 1) {
+
+				$username = $_SESSION['username'];
+
+				echo "<button class='btn btn-primary render_modal_body'  data-toggle='modal' data-target='#myModal' data-index='$index' >Edit</button>";
+
+				echo "<button class='btn btn-danger render_modal_body_delete'  data-toggle='modal' data-target='#myModaldelete' data-index='$index' >Delete</button>";
+
+			}elseif (isset($_SESSION['username'])) {
+
+				echo "<form action='addtocart.php?index=$index'method='POST'>
+				<input type='number' name='qty' placeholder='Quantity' value='0'><br>";
+				echo " <button class='btn btn-warning'>Add To Cart</button></form>";
+
+			}
+
+			echo "</div>";
+
+			}/*endif*/
+	}/*end while*/
 	
-	foreach ($items as $index => $item) {
-
-		$img = $item['img'];
-		$name = $item['name'];
-		$description = $item['description'];
-		$price = $item['price'];
-
-		if ($filter == 'All' || $item['category'] == $filter) {
-		
-		echo "<div class='col-xs-4 item_display'><img src='".$item['img']."'>";
-		echo "<h5>".$item['name']."</h5>";
-		echo "Price: &#8369;".$item['price']."<br>";
-
-		if (isset($_SESSION['username']) && $_SESSION['username'] == 'admin') {
-
-			$username = $_SESSION['username'];
-
-			echo "<button class='btn btn-primary render_modal_body'  data-toggle='modal' data-target='#myModal' data-index='$index' >Edit</button>";
-
-			echo "<button class='btn btn-danger render_modal_body_delete'  data-toggle='modal' data-target='#myModaldelete' data-index='$index' >Delete</button>";
-
-		}elseif (isset($_SESSION['username'])) {
-
-			echo "<form action='addtocart.php?index=$index'method='POST'>
-			<input type='number' name='qty' placeholder='Quantity' value='0'><br>";
-			echo " <button class='btn btn-warning'>Add To Cart</button></form>";
-
-		}
-
-		echo "</div>";
-
-		
-		}
-	}
 	echo "</div>";	
 
 	echo '<!-- Modal -->
