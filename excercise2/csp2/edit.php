@@ -8,6 +8,7 @@
 	$name = mysqli_real_escape_string($conn,$_POST['name']);
 	$description = mysqli_real_escape_string($conn,$_POST['description']);
 	$price = mysqli_real_escape_string($conn,$_POST['price']);
+	$category = mysqli_real_escape_string($conn,$_POST['category']);
 
 	/*$items[$index]['name'] = htmlspecialchars($_POST['name']);
 	$items[$index]['description'] = htmlspecialchars($_POST['description']);
@@ -16,7 +17,8 @@
 	$sql = "UPDATE rooms SET
 			name ='$name',
 			description = '$description',
-			price = '$price'
+			price = '$price',
+			category_id = '$category'
 			WHERE id ='$index'";
 
 	mysqli_query($conn,$sql) or die(mysqli_error($conn));

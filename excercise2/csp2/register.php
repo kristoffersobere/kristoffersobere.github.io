@@ -41,7 +41,7 @@ function displayContent(){
     </div>
     <div class="form-group"> 
       <div class="col-sm-offset-2 col-sm-10">
-        <input type="submit" class="btn btn-default" name="register" value="Register" disabled>
+        <input type="submit" class="btn btn-default" name="login" value="Register" disabled>
       </div>
     </div>
   </form>
@@ -50,46 +50,46 @@ function displayContent(){
 ';
 }
 
-/*<form action="" method="" class="form-horizontal" > //for pure javscript form
+// <form action="" method="" class="form-horizontal" > //for pure javscript form
 
-  <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Full Name: </label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="email" placeholder="Full Name" name="fname" required>
-      </div>
-    </div>
+//   <div class="form-group">
+//       <label class="control-label col-sm-2" for="email">Full Name: </label>
+//       <div class="col-sm-10">
+//         <input type="text" class="form-control" id="email" placeholder="Full Name" name="fname" required>
+//       </div>
+//     </div>
 
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">UserName: </label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
-      </div>
-    </div>
+//     <div class="form-group">
+//       <label class="control-label col-sm-2" for="email">UserName: </label>
+//       <div class="col-sm-10">
+//         <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
+//       </div>
+//     </div>
 
-  <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Password: </label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" id="pw" placeholder="Enter password" name="pw" required>
-      </div>
-    </div>
+//   <div class="form-group">
+//       <label class="control-label col-sm-2" for="email">Password: </label>
+//       <div class="col-sm-10">
+//         <input type="password" class="form-control" id="pw" placeholder="Enter password" name="pw" required>
+//       </div>
+//     </div>
 
-  <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Confirm Password: </label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" id="cpw" oninput="validatepass()" placeholder="Enter password" name="cpw" required>
-        <p id="para"></p>
-      </div>
-    </div>
+//   <div class="form-group">
+//       <label class="control-label col-sm-2" for="email">Confirm Password: </label>
+//       <div class="col-sm-10">
+//         <input type="password" class="form-control" id="cpw" oninput="validatepass()" placeholder="Enter password" name="cpw" required>
+//         <p id="para"></p>
+//       </div>
+//     </div>
 
-   <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-       <input type="submit" name="" value="Register" id="btn" class="btn btn-primary">
-      </div>
-    </div>
+//    <div class="form-group">        
+//       <div class="col-sm-offset-2 col-sm-10">
+//        <input type="submit" name="" value="Register" id="btn" class="btn btn-primary">
+//       </div>
+//     </div>
 
   
 
-</form>*/
+// </form>
 
 require 'template.php'
  ?>

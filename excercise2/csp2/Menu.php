@@ -7,6 +7,10 @@ function displayTitle(){
 
 function displayContent() {
 	require 'db/connection.php';
+
+	if (isset($_SESSION['username']) && $_SESSION['user_type'] == 1){
+		echo "<button class='btn btn-success' id='add_item'>Add Item</button>";
+	}
 	
 	$filter = isset($_GET['category'])? $_GET['category']: 'All';
 	
@@ -37,7 +41,7 @@ function displayContent() {
 
 				$username = $_SESSION['username'];
 
-				echo "<button class='btn btn-primary render_modal_body'  data-toggle='modal' data-target='#myModal' data-index='$index' >Edit</button>";
+				echo "<button class='btn btn-primary render_modal_body' data-toggle='modal' data-target='#myModal' data-index='$index'>Edit</button>";
 
 				echo "<button class='btn btn-danger render_modal_body_delete'  data-toggle='modal' data-target='#myModaldelete' data-index='$index' >Delete</button>";
 

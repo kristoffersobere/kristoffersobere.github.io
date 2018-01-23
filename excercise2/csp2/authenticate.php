@@ -4,6 +4,7 @@ session_start();
 
 /*$string = file_get_contents("assets/users.json");
 $users = json_decode($string, true);*/
+if(isset($_POST['submit'])){
 $username = $_POST['username'];
 $password = sha1($_POST['password']);
 
@@ -19,6 +20,19 @@ $result = mysqli_query($conn,$sql);
 				      }else {
 				         $error = "Your Login Name or Password is invalid";
 				      }
+}
 
+if (isset($_POST['register'])) {
+
+	$user = $_POST['username'];
+	$sql = "SELECT * FROM users WHERE username = '$user'";
+	$results = mysqli_query($conn,$sql);
+
+	if(mysqli_num_rows($results)>0){
+		echo "invalid";
+	}else {
+		echo "valid";
+	}
+}
 
 ?>

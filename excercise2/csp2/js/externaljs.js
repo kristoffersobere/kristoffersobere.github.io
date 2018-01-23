@@ -17,23 +17,38 @@
 		}
 	}
 */
-		var users;
+	//username validation
+		/*var users;
 		$.getJSON("assets/users.json", function(json){
 			users = json
-		});
+		});*/
+		$('#username').on('input', function(){
+			var username = $('#username').val()
 
-		$('input[name=username]').on('input', function(){
-			var username = $('input[name=username]').val()
-			if (typeof users[username] !== 'undefined') {
-				$('#username_error').css('color','red')
-				$('#username_error').html('username exists')
-			} else {
-				$('#username_error').css('color','green')
-				$('#username_error').html('available')
-			}
+			$.ajax({
+				method: 'POST',
+				url : 'authenticate.php',
+				data: {
+					register: true,
+					username: username
+				},
+				success:function(data){
+
+					//console.log(data);
+
+					if (data == 'invalid') {
+						$('#username_error').css('color','red')
+						$('#username_error').html('username exists')
+					} else {
+						$('#username_error').css('color','green')
+						$('#username_error').html('available')
+					}
+				}
+			});
 		});	
 
-		//for password validtion jquery
+
+///////////////for password validtion jquery
 		$('input[name=cpw]').on('input', function(){
 			 ppw = $('input[name=pw]').val();
 			 ccpw = $('input[name=cpw]').val();
@@ -50,18 +65,40 @@
 		});
 
 
-//for ajax modal
+////////////////////////////for ajax modals
+/////////////////////////////////////////////////add rooms
+		$("#add_item").click(function(){
+		$.ajax({
+			method: 'post',
+			url: 'render_modal_body_endpoint.php',
+			data: {
+				add : true,
+			},
+			success: function(data){
+				$("#modal-body").html(data);
+				$("#myModal").modal('show');
+			}
+		});
+	});
+
 		$('.render_modal_body').click(function(){
 			var index = $(this).data('index');
-			$.post('render_modal_body_endpoint.php',{index : index},function(data){
-				$('#modal-body').html(data);
-			});
+			$.ajax({
+			method: 'post',
+			url: 'render_modal_body_endpoint.php',
+			data: {
+				edit : true,
+				index : index
+			},
+			success: function(data){
+				$("#modal-body").html(data);
+			}
 		});
+	});
 
 		$('.render_modal_body_delete').click(function(){
 			var index = $(this).data('index');
 			$.post('render_modal_body_endpoint_delete.php',{index : index},function(data){
 				$('#modal-body-delete').html(data);
 			});
-		});
-
+		});0
