@@ -11,10 +11,16 @@ div.footer {
     width: 100%;
     background-color: grey;
     color: white;
+    margin-top: 8%;
+    padding: 5px;
     text-align: center;
 
 }
 .sidebar{
     border: solid 1px;
     color: grey;
+}
+
+.container {
+    height: auto;
 }

@@ -1,4 +1,9 @@
-<?php session_start();  ?>
+<?php session_start();  
+	date_default_timezone_set('ASIA/MANILA'); 
+	$date_now = date("Y-m-d",strtotime( "+7 days"));
+	$date_later = date("Y-m-d",strtotime( "+8 days"));
+	$datetime = date("Y-m-d H:i:s");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +27,7 @@
 <h2><?php echo displayTitle().'<br>' ; ?></h2>
 
 	<div class="row">
-		<div class="col-lg-10">
+		
 
 			<?php displayContent(); ?>
 
@@ -31,7 +36,7 @@
 
 
 		
-			</div>
+		
 		
 			<?php require 'partials/sidebar.php'; ?>
 
