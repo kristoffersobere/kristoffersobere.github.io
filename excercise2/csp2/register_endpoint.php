@@ -1,10 +1,16 @@
 <?php
 require 'db/connection.php';
 session_start();
+	$fname = $_POST['firstname'];
+	$lname = $_POST['lastname'];
+	$email = $_POST['email'];
+	$number = $_POST['number'];
+	$address = $_POST['address'];
 	$username = $_POST['username'];
 	$password = sha1($_POST['pw']);
 
-$sql = "INSERT INTO users (username,password,user_type) VALUES ('$username','$password',2)";
+$sql = "INSERT INTO users (firstname,lastname,email,number,address,username,password,user_type,status) VALUES ('$fname','$lname','$email','$number','$address',
+'$username','$password',2,1)";
 mysqli_query($conn,$sql) or die(mysqli_error($conn));
 
 $_SESSION['username'] = $username;

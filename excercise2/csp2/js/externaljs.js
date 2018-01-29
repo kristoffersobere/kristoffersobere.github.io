@@ -96,9 +96,55 @@
 		});
 	});
 
+	
 		$('.render_modal_body_delete').click(function(){
 			var index = $(this).data('index');
 			$.post('render_modal_body_endpoint_delete.php',{index : index},function(data){
 				$('#modal-body-delete').html(data);
 			});
-		});0
+		});
+
+		// function send(index){
+  //       qty = $('.quant').val();
+  //       console.log(index);
+  //       console.log(qty);
+    
+        
+  //     $.ajax({
+  //       method:'POST',
+  //       url:'cart_qty_change.php',
+  //       data:{
+  //         index : index,
+  //         qty: qty,
+  //         price: price
+  //       },
+  //       success: function(data){
+  //         //console.log(data)
+  //         $('#modal-body-cart').val(data)
+  //       }
+  //     });
+
+  //   }
+
+
+	//date pick meup
+    $( "#datepicker" ).datepicker({ dateFormat: "yy-mm-dd",
+        numberOfMonths: 1,
+        minDate: (3),
+        maxDate:(30),
+onSelect: function() {
+				var date = $(this).datepicker('getDate');
+				if (date){
+					date.setDate(date.getDate() + 1);
+					$( "#datepicker1" ).datepicker( "option", "minDate", date );
+					$( "#datepicker1" ).datepicker( "option", "minDate", date );
+        }
+ }
+
+     });
+
+	    $( "#datepicker1" ).datepicker({ dateFormat: "yy-mm-dd",
+        numberOfMonths: 1,
+		minDate: (4),
+		maxDate:(30),
+    });

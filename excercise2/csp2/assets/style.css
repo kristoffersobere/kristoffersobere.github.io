@@ -5,7 +5,7 @@
 }
 
 div.footer {
-	position: relative;
+	position: inherit;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -22,5 +22,14 @@ div.footer {
 }
 
 .container {
-    height: auto;
+    padding-top: 5%;
+    display:table;
+    height:800px;
+    width:100%;
 }
+
+.container > div{
+    display:table-row;
+}
+
+#ui-datepicker-div {display: none;}

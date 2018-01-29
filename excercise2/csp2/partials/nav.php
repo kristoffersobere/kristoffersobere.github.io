@@ -2,11 +2,10 @@
 $username = "";
 if(isset($_SESSION['username'])){
   $username = $_SESSION['username'];
+  $firstname = $_SESSION['firstname'];
 }
-
-
 ?>
- <nav class="navbar navbar-inverse">
+ <nav class="navbar navbar-inverse" style="position: fixed;width: 100%;z-index: 3; ">
     <div class="container-fluid">
       <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
@@ -16,10 +15,12 @@ if(isset($_SESSION['username'])){
               <span class="icon-bar"></span>
             </button>
 
-        <a class="navbar-brand" href="#"><img src="" alt="">utube</a>
+        <a class="navbar-brand" href="#"><img src="" alt=""><strong>GOSU</strong></a>
         <a class="navbar-brand" href="#"> 
         <div class="logo col-xs-12">
-          <span><?php echo  strtoupper($username); ?></span>
+          <span ><?php if (isset($_SESSION['firstname'])) {
+             echo $firstname;
+          } ?></span>
         </div><!--  -->
         </a><!-- /a -->
         </div><!-- /navbar -->
@@ -27,14 +28,21 @@ if(isset($_SESSION['username'])){
       <div id="navbar2" class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
           <li><a href="Homepage.php">Home</a></li>
-          <li><a href="Menu.php">Menu</a></li>
+         <!--  <li><a href="menu2.php">Menu</a></li> -->
           <li><a href="About.php">About</a></li>
-
           <li><a href="ContactUs.php">ContactUs</a></li>
+          <li><a href="myreservation.php"><i class="fa fa-bed fa-lg" aria-hidden="true"></i> MyReservation</a></li>
+            <?php  
+          if (isset($_SESSION['username'])) {
+             echo '<li class="waves-effect waves-dark"><a href="#" data-toggle="modal" data-target="#modalcart">CART <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>(';if (isset($_SESSION['cart'])) {
+               echo count($_SESSION['cart']);
+             }else {
+              echo "0";
+             }echo ')</a></li>';
+          }
+          ?>
             <?php  if (isset($_SESSION['username'])) {?>
               <li><a href='logout.php'><span class='glyphicon glyphicon-user'></span>Logout</a></li> 
-      
-     
             <?php }else { ?>
               <li class="waves-effect waves-dark"><a href="#" data-toggle="modal" data-target="#ModalSignIn"><span class="fa fa-user"></span> Sign in</a></li>
             <?php } ?>
@@ -45,6 +53,8 @@ if(isset($_SESSION['username'])){
     </div>
     <!--/.container-fluid -->
   </nav>
+
+
 
   <div id="ModalSignIn" class="modal fade" role="dialog">
     <div id="ModalSignIn" class="modal-dialog">
@@ -77,3 +87,7 @@ if(isset($_SESSION['username'])){
   </div>
 </div>
 
+
+
+
+   <!--  <script type="text/javascript" src="../js/externaljs.js"></script> -->

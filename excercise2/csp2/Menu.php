@@ -34,7 +34,8 @@ function displayContent() {
 		
 			if($filter == 'All'|| $item['category_id'] == $filter){
 			echo "<div class='col-xs-4 item_display'><img src='".$item['image']."'>";
-			echo "<h5>".$item['name']."</h5>";
+			echo "<h3>".$item['name']."</h3>";
+			echo "<h4>Available: ".$item['qty']."</h4>";
 			echo "Price: &#8369;".$item['price']."<br>";
 
 			if (isset($_SESSION['username']) && $_SESSION['user_type'] == 1) {
@@ -48,7 +49,7 @@ function displayContent() {
 			}elseif (isset($_SESSION['username'])) {
 
 				echo "<form action='addtocart.php?index=$index'method='POST'>
-				<input type='number' name='qty' placeholder='Quantity' value='0'><br>";
+				<input type='number' name='qty' placeholder='Quantity' required><br>";
 				echo " <button class='btn btn-warning'>Add To Cart</button></form>";
 
 			}
@@ -111,8 +112,6 @@ function displayContent() {
 			</div>';
 
 }
-
-
 
 require 'template.php';
 
