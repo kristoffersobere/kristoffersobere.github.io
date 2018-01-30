@@ -55,13 +55,31 @@
 
 			if(ppw !=  ccpw){
 				$('input[name=register]').attr('disabled',true)
-				$('#pw_error').css('color','red')
-				$('#pw_error').html('passwords do not match')
+				$('.pw_error').css('color','red')
+				$('.pw_error').html('passwords do not match')
 			} else {
 				$('input[name=register]').removeAttr('disabled')
-				$('#pw_error').css('color','green')
-				$('#pw_error').html('passwords matched')
+				$('.pw_error').css('color','green')
+				$('.pw_error').html('passwords matched')
 			}
+		});
+
+///////////////for password validtion jquery
+		$('#cpwd').on('input', function(){
+
+			console.log('asdasd')
+			//  ppw = $('#pwd').val();
+			//  ccpw = $('#cpwd').val();
+
+			// if(ppw !=  ccpw){
+			// 	$('#btn_user_submit').attr('disabled',true)
+			// 	$('#pwd_error').css('color','red')
+			// 	$('#pwd_error').html('passwords do not match')
+			// } else {
+			// 	$('#btn_user_submit').removeAttr('disabled')
+			// 	$('#pwd_error').css('color','green')
+			// 	$('#pwd_error').html('passwords matched')
+			// }
 		});
 
 
@@ -80,6 +98,38 @@
 			}
 		});
 	});
+
+			/////modal for add user
+		$("#add_user").click(function(){
+		$.ajax({
+			method: 'post',
+			url: 'add_users.php',
+			data: {
+				addusers: true,
+			},
+			success: function(data){
+				$("#modal-body-users").html(data);
+				$("#add").modal('show');
+			}
+		});
+	});
+		/////modal for edit user
+		$('.edit_user1').click(function(){
+			var index = $(this).data('index');
+			$.ajax({
+			method: 'post',
+			url: 'edit_users.php',
+			data: {
+				edit : true,
+				index : index
+			},
+			success: function(data){
+				$("#modal-body-users").html(data);
+				$("#add").modal('show');
+			}
+		});
+	});
+
 
 		$('.render_modal_body').click(function(){
 			var index = $(this).data('index');
@@ -132,7 +182,7 @@
         numberOfMonths: 1,
         minDate: (3),
         maxDate:(30),
-onSelect: function() {
+		onSelect: function() {
 				var date = $(this).datepicker('getDate');
 				if (date){
 					date.setDate(date.getDate() + 1);
@@ -147,4 +197,11 @@ onSelect: function() {
         numberOfMonths: 1,
 		minDate: (4),
 		maxDate:(30),
+    });
+
+	    //datatables
+	    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
     });

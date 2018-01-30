@@ -60,7 +60,7 @@ function displayContent(){
       <label class="control-label col-sm-2" for="cpw">Confirm Password:</label>
       <div class="col-sm-8"> 
         <input type="password" class="form-control" id="cpw" name="cpw" placeholder="Confirm password">
-        <span id="pw_error"></span>
+        <span class="pw_error"></span>
       </div>
     </div>
 

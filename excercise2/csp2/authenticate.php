@@ -8,22 +8,36 @@ if(isset($_POST['submit'])){
 $username = $_POST['username'];
 $password = sha1($_POST['password']);
 
-$sql = "SELECT * FROM users WHERE username = '$username' and password = '$password'";
+$sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 $result = mysqli_query($conn,$sql);
 
-			//if (isset($_POST['submit'])) {				
 					 if(mysqli_num_rows($result)>0) {	
 					 	$row = mysqli_fetch_assoc($result);
-			         	$_SESSION['username'] = $row['username'];
-			         	$_SESSION['id'] = $row['id'];
-			         	$_SESSION['firstname'] = $row['firstname'];
-			         	$_SESSION['lastname']= $row['lastname'];
-			         	$_SESSION['user_type'] = $row['user_type'];
-			      		header('location:homepage.php');
-				      }else {
-				         $error = "Your Login Name or Password is invalid";
-				      }
-}
+
+					 	if ($row['status'] == 1 && $row['user_type'] == 2) {
+					 		$_SESSION['username'] = $row['username'];
+				         	$_SESSION['id'] = $row['id'];
+				         	$_SESSION['firstname'] = $row['firstname'];
+				         	$_SESSION['lastname']= $row['lastname'];
+				         	$_SESSION['user_type'] = $row['user_type'];
+				         	header('location:homepage.php');
+					 	} elseif ($row['user_type'] == 3) {
+					 		$_SESSION['username'] = $row['username'];
+				         	$_SESSION['id'] = $row['id'];
+				         	$_SESSION['firstname'] = $row['firstname'];
+				         	$_SESSION['lastname']= $row['lastname'];
+				         	$_SESSION['user_type'] = $row['user_type'];
+				         	header('location:admin/pages/index.php');
+					 		} else {
+					 			echo "your account is not active";
+					 		}
+
+					 	}//if rese
+					 	else {
+
+				         	echo "your account doesnt exist!";
+				      }//else res
+}//
 
 if (isset($_POST['register'])) {
 
@@ -38,4 +52,4 @@ if (isset($_POST['register'])) {
 	}
 }
 
-?>
+?>								
