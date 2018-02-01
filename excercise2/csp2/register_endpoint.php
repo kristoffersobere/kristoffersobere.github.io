@@ -8,32 +8,19 @@ session_start();
 	$address = $_POST['address'];
 	$username = $_POST['username'];
 	$password = sha1($_POST['pw']);
+	$set = 63;
+	$setnumber = substr($number,1);
+	$numbers =  $set . $setnumber; 
 
-$sql = "INSERT INTO users (firstname,lastname,email,number,address,username,password,user_type,status) VALUES ('$fname','$lname','$email','$number','$address',
+$sql = "INSERT INTO users (firstname,lastname,email,number,address,username,password,user_type,status) VALUES ('$fname','$lname','$email',$numbers,'$address',
 '$username','$password',2,1)";
 mysqli_query($conn,$sql) or die(mysqli_error($conn));
 
-$_SESSION['username'] = $row['username'];
-$_SESSION['id'] = $row['id'];
-$_SESSION['firstname'] = $row['firstname'];
-$_SESSION['lastname']= $row['lastname'];
-$_SESSION['user_type'] = $row['user_type'];
-header('location: Homepage.php');
-/*$username = $_POST['username'];
-$password = $_POST['pw'];
-
-$string = file_get_contents("assets/users.json");
-$users = json_decode($string, true);
-echo "original users array"; print_r($users);
-
-$users[$username] = $password;
-echo "<br> new users array"; print_r($users);
-
-$file = fopen("assets/users.json", "w");
-fwrite($file, json_encode($users,JSON_PRETTY_PRINT));
-fclose($file);
-
-echo "<script type='text/javascript'>alert('success')</script>";
-header('location: register.php');*/
+$_SESSION['username']= $username;
+$_SESSION['id'];
+$_SESSION['firstname'];
+$_SESSION['lastname'];
+$_SESSION['user_type'];
+//header('location: homepage.php');
 ?>
 

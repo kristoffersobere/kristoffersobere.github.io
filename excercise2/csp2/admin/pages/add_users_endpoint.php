@@ -2,6 +2,9 @@
 
 require '../../db/connection.php';
 
+	
+
+
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $email = $_POST['email'];
@@ -17,5 +20,6 @@ $sql = "INSERT INTO users (firstname, lastname, email, address, number,username,
 mysqli_query($conn,$sql) or die(mysqli_error($conn));
 
 header('location: users.php');
+
 
 ?>

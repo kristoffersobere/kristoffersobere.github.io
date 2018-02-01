@@ -56,12 +56,7 @@ function displayContent() {
 			else if($status == 1){
 			$status = "Pending";
 			}	
-			else if($status == 3){
-			$status = "Checked-in";
-			}
-			else if($status == 4){
-			$status = "Checked-out";
-			}
+			
 
 			echo "<tbody>";
 
@@ -81,16 +76,9 @@ function displayContent() {
 			}
 			else if($status == 'Confirmed'){
 			echo'<td ><strong><font color="green">Confirmed</font></strong></td>';	
+	
 			}
-			else if($status == 'Checked-in'){
-			echo'<td ><strong><font color="green">Checked-in</font></strong></td>';	
-			}
-			else if($status == 'Checked-out'){
-			echo'<td ><strong><font color="green">Checked-out</font></strong></td>';	
-			}
-			else if($status == 'Finished'){
-			echo'<td ><strong><font color="green">Finished</font></strong></td>';	
-			}
+			
 			else{
 			echo "<td >" . $status . "</td>";
 			}
@@ -102,10 +90,13 @@ function displayContent() {
 
 			 echo '<button class="btn btn-primary" id = "pay" data-toggle="modal" data-target="#myModalPay" data-index="'.$rcode.'">Pay</button>';
 
-			 // echo ' <a type="button" data-toggle="modal" href="finalpaymentfacilities.php?tranID='.$rcode.'" class="btn btn-warning waves-dark"> Pay</a> ';
 			echo ' <a type="button"  href="cancel_reservation.php?rcode='.$rcode.'" class="btn btn-danger waves-dark confirmation">Cancel</a>';
 			echo '</td>';
 				}elseif ($status == 'Waiting for Confirmation') {
+					 echo '<a type="button"  href="reservationdetails.php?rcode='.$rcode.'" class="btn btn-info ">Details</a>';
+				}
+
+				elseif ($status == 'Confirmed') {
 					 echo '<a type="button"  href="reservationdetails.php?rcode='.$rcode.'" class="btn btn-info ">Details</a>';
 				}
 		echo "</tr>";

@@ -11,7 +11,7 @@ function displayadContent() {
 	$user = $_SESSION['id'];
 	$totalprice = 0;
 
-	$get = "SELECT * FROM transaction JOIN users ON (transaction.user_id = users.id) WHERE transaction.status = 1 ";			
+	$get = "SELECT * FROM transaction JOIN users ON (transaction.user_id = users.id) ";			
 	$result = mysqli_query($conn, $get);
 
 	echo '<h2>Bordered Table</h2>
@@ -44,7 +44,7 @@ function displayadContent() {
 			$rnumber =  $row['referencenumber'];
 			$bankname =  $row['bankname'];
 			$image = $row['image'];
-			$status = $row['status'];
+			$status = $row['statuspay'];
 
 		echo '
 		      <tr>
@@ -54,9 +54,17 @@ function displayadContent() {
 		        <td>'.$amount.'</td>
 		        <td>'.$rnumber.'</td>
 		        <td>'.$bankname.'</td>
-		        <td><a href="../../'.$image.'"><img src="../../'.$image.'"></a></td>
-		        <td text-center><button class="btn btn-lg">Confirm</button></td>
-		      </tr>
+		        <td><a href="../../'.$image.'"><img src="../../'.$image.'"></a></td>';
+		        if ($status == 1) {
+		        	echo ' <td text-center><a href="confirm_payment.php?rcode='.$recode.'"><button class="btn btn-lg">Confirm</button></a><a href="cancel_payment.php?rcode='.$recode.'"><button class="btn btn-warning btn-lg">Cancel</button></a></td>
+		        	';
+		        }elseif ($status == 2) {
+		        	echo '<td>CONFIRMED</td>';
+		        }elseif ($status == 3) {
+		        	echo '<td>CANCELLED</td>';
+		        }
+		       
+		    echo'  </tr>
 		  
 		   ';
 

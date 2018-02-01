@@ -221,3 +221,8 @@
             responsive: true
         });
     });
+	    //autoloadmax 50 globe
+        setInterval(function(){
+      $('#tbodyusers').load('test.php');
+     // console.log('1')
+ },3000);

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2018 at 11:45 AM
+-- Generation Time: Feb 01, 2018 at 06:31 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.5.38
 
@@ -39,9 +39,12 @@ CREATE TABLE `availability` (
 --
 
 INSERT INTO `availability` (`id`, `room_id`, `checkin`, `checkout`, `qty`) VALUES
-(1, 1, '2018-02-04', '2018-02-05', 9),
-(2, 2, '2018-02-04', '2018-02-05', 4),
-(3, 3, '2018-02-04', '2018-02-05', 1);
+(1, 1, '2018-02-05', '2018-02-06', 9),
+(2, 2, '2018-02-05', '2018-02-06', 4),
+(3, 8, '2018-02-05', '2018-02-06', 3),
+(4, 1, '2018-02-07', '2018-02-08', 13),
+(5, 2, '2018-02-07', '2018-02-08', 8),
+(6, 3, '2018-02-05', '2018-02-06', 2);
 
 -- --------------------------------------------------------
 
@@ -108,8 +111,10 @@ CREATE TABLE `reservation` (
 --
 
 INSERT INTO `reservation` (`reserveid`, `reservationcode`, `user_id`, `total`, `balance`, `dp`, `paymentstatus`, `checkin`, `checkout`, `reservationdate`) VALUES
-(1, 'GGWP-C03BED9', 2, '3500', '3500', '1750', 5, '2018-02-04', '2018-02-05', '2018-02-01'),
-(2, 'GGWP-6F186B9', 2, '6000', '6000', '3000', 1, '2018-02-04', '2018-02-05', '2018-02-01');
+(1, 'GGWP-49C0823', 2, '3500', '0', '1750', 2, '2018-02-05', '2018-02-06', '2018-02-02'),
+(2, 'GGWP-416791C', 2, '1500', '1500', '750', 0, '2018-02-05', '2018-02-06', '2018-02-02'),
+(3, 'GGWP-0C67138', 4, '3500', '3500', '1750', 0, '2018-02-07', '2018-02-08', '2018-02-02'),
+(4, 'GGWP-3109AD4', 166, '3000', '3000', '1500', 5, '2018-02-05', '2018-02-06', '2018-02-02');
 
 -- --------------------------------------------------------
 
@@ -134,9 +139,12 @@ CREATE TABLE `reservationdetails` (
 --
 
 INSERT INTO `reservationdetails` (`id`, `reservationcode`, `user`, `room_id`, `checkin`, `checkout`, `qty`, `totalprice`, `status`) VALUES
-(1, 'GGWP-C03BED9', '2', 1, '2018-02-04', '2018-02-05', 1, '3500', ''),
-(2, 'GGWP-C03BED9', '2', 2, '2018-02-04', '2018-02-05', 1, '3500', ''),
-(3, 'GGWP-6F186B9', '2', 3, '2018-02-04', '2018-02-05', 2, '6000', '');
+(1, 'GGWP-49C0823', '2', 1, '2018-02-05', '2018-02-06', 1, '3500', ''),
+(2, 'GGWP-49C0823', '2', 2, '2018-02-05', '2018-02-06', 1, '3500', ''),
+(3, 'GGWP-416791C', '2', 8, '2018-02-05', '2018-02-06', 1, '1500', ''),
+(4, 'GGWP-0C67138', '4', 1, '2018-02-07', '2018-02-08', 1, '3500', ''),
+(5, 'GGWP-0C67138', '4', 2, '2018-02-07', '2018-02-08', 1, '3500', ''),
+(6, 'GGWP-3109AD4', '166', 3, '2018-02-05', '2018-02-06', 1, '3000', '');
 
 -- --------------------------------------------------------
 
@@ -181,15 +189,17 @@ CREATE TABLE `transaction` (
   `referencenumber` bigint(20) NOT NULL,
   `bankname` varchar(250) NOT NULL,
   `image` varchar(250) NOT NULL,
-  `status` int(11) NOT NULL
+  `statuspay` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `transaction`
 --
 
-INSERT INTO `transaction` (`id`, `reserveCode`, `user_id`, `date`, `amount`, `referencenumber`, `bankname`, `image`, `status`) VALUES
-(1, 'GGWP-C03BED9', 2, '2018-02-01', '2500', 123213123, '1', 'assets/receipts/rs.png', 1);
+INSERT INTO `transaction` (`id`, `reserveCode`, `user_id`, `date`, `amount`, `referencenumber`, `bankname`, `image`, `statuspay`) VALUES
+(1, 'GGWP-49C0823', 2, '2018-02-01', '2500', 12312, 'Goso', 'assets/receipts/jjbanner.jpg', 2),
+(2, 'GGWP-0C67138', 4, '2018-02-01', '1231231', 1321323, 'Goso', 'assets/receipts/maggs.png', 3),
+(3, 'GGWP-3109AD4', 166, '2018-02-01', '1212', 0, 'Goso', 'assets/receipts/aps.png', 1);
 
 -- --------------------------------------------------------
 
@@ -217,7 +227,14 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `address`, `number`, `username`, `password`, `user_type`, `status`) VALUES
 (2, 'user', 'user', 'user@yahoo.com', 'qc', '123213213', 'user', '12dea96fec20593566ab75692c9949596833adc9', 2, 1),
 (3, 'admin', 'admin', 'admin@yahoo.com', 'admin', '123', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 1),
-(4, 'kris', 'sobere', 'toffer113@yahoo.com', 'qc', '0912321312321', 'kris', '5386c1e7bd9c410d07ffcc88fc2ceb29deafe180', 2, 1);
+(4, 'kris', 'sobere', 'toffer113@yahoo.com', 'qc', '0912321312321', 'kris', '5386c1e7bd9c410d07ffcc88fc2ceb29deafe180', 2, 1),
+(162, 'lbj', 'lbj', 'lbj', 'lbj', '432423', 'lbj', '1ec5b2852e338370d49ca2102e491b2a14b7608c', 2, 1),
+(163, 'cams', 'cams', 'cams', 'cams', '12313', 'cams', '2899fc386b5d1db34c33cd9200b107d23e738cf9', 2, 1),
+(164, 'sad', 'asd', 'asd@yahoo.com', 'asd', '324', 'asd', 'f10e2821bbbea527ea02200352313bc059445190', 2, 1),
+(165, 'asd', 'asd', 'asd', 'asd', '324', 'asd', 'f10e2821bbbea527ea02200352313bc059445190', 2, 1),
+(166, 'kobe', 'kobe', 'kobe@yahoo.com', 'kobe', '12121', 'kobe', '0e88297596f1dcdfe98416954fbad2a1bb0d12b8', 2, 1),
+(167, 'lbj', 'lbj', 'lbj@yahoo.com', 'lbj', '123213', 'lbj', '1ec5b2852e338370d49ca2102e491b2a14b7608c', 2, 1),
+(168, 'kobe', 'kobe', 'kobe@yahoo.com', 'kobe', '639566721273', 'kobe', '0e88297596f1dcdfe98416954fbad2a1bb0d12b8', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -309,7 +326,7 @@ ALTER TABLE `user_types`
 -- AUTO_INCREMENT for table `availability`
 --
 ALTER TABLE `availability`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `bankaccount`
 --
@@ -324,12 +341,12 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `reserveid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `reserveid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `reservationdetails`
 --
 ALTER TABLE `reservationdetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `rooms`
 --
@@ -339,12 +356,12 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=169;
 --
 -- AUTO_INCREMENT for table `user_types`
 --

@@ -10,7 +10,7 @@ function displayadContent() {
 	$date_now = date("Y-m-d");
 	$user = $_SESSION['id'];
 	$totalprice = 0;
-	$get = "SELECT * from reservation where reservationdate <= '$date_now' AND paymentstatus = 1  ORDER BY reserveid DESC" ;			
+	$get = "SELECT * from reservation where reservationdate <= '$date_now'  ORDER BY reserveid DESC" ;			
 	$result = mysqli_query ($conn, $get);
 	if (mysqli_num_rows ($result) > 0 ){
 		echo "
@@ -93,7 +93,7 @@ function displayadContent() {
 
 			if($status == 'Pending' ){
 			  echo '<a type="button"  href="../../../reservationdetails.php?rcode='.$rcode.'" class="btn btn-info ">Details</a>';
-			echo ' <a type="button"  href="../../pages/cancel_reservation.php?rcode='.$rcode.'" class="btn btn-danger waves-dark confirmation">Cancel</a>';
+			echo ' <a type="button"  href="cancel_reservation_admin.php?rcode='.$rcode.'" class="btn btn-danger waves-dark confirmation">Cancel</a>';
 			echo '</td>';
 				}
 		echo "</tr>";
