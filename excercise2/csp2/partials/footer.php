@@ -1,5 +1,5 @@
+<div class="footer" style="position: fixed;width: 100%;z-index: 3; ">
 
-	<div class="footer" >
+
 		 <p>Footer</p>
-	</div>
-
+</div>

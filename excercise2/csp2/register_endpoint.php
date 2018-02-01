@@ -13,8 +13,11 @@ $sql = "INSERT INTO users (firstname,lastname,email,number,address,username,pass
 '$username','$password',2,1)";
 mysqli_query($conn,$sql) or die(mysqli_error($conn));
 
-$_SESSION['username'] = $username;
-$_SESSION['user_type'] = 2;
+$_SESSION['username'] = $row['username'];
+$_SESSION['id'] = $row['id'];
+$_SESSION['firstname'] = $row['firstname'];
+$_SESSION['lastname']= $row['lastname'];
+$_SESSION['user_type'] = $row['user_type'];
 header('location: Homepage.php');
 /*$username = $_POST['username'];
 $password = $_POST['pw'];

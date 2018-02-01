@@ -25,7 +25,7 @@ function displayContent() {
 							$img = $row_fac['image'];
 							$path ="upload/";
 
-							$avail = "SELECT * FROM availability WHERE room_id = $id AND checkin ='$datein' AND checkout = '$dateout'";
+							$avail = "SELECT * FROM availability WHERE room_id = $id AND checkin >='$datein' AND checkout <= '$dateout'";
 							$avail_que = mysqli_query($conn, $avail);
 							while ($row = mysqli_fetch_array($avail_que)) {
 								$quan2 = $row['qty'];
@@ -84,6 +84,8 @@ require 'template.php';
               <div class="row">
 
                 <?php 
+
+                /////////////CAAAAART!!!
                  require 'db/connection.php';
 				date_default_timezone_set('ASIA/MANILA'); 
 				$date_now = date("Y-m-d");
@@ -122,7 +124,7 @@ require 'template.php';
                             echo "<input type='number' name='qty' class='quant' id='$index' min='1' max='".$qty."' value='$q' >";
                             //echo "<button onClick='send(".$index.")' type='button'>qty</button>";
                             echo '<br><input class="btn btn-primary " type="submit"  value="Change Quantity" >';
-                            echo "<br><a href='cart_remove.php?index=$index'><input class='btn btn-warning' type='button' name='' value='Remove from Cart'></a><br>";
+                            echo "<br><a href='cart_remove.php?index=$index&checkin=$datein&checkout=$dateout'><input class='btn btn-warning' type='button' name='' value='Remove from Cart'></a><br>";
                             echo "</form></div>";
                                       
                             

@@ -62,7 +62,7 @@ $index = $_POST['index'];
     <div class="form-group">
       <label class="control-label col-sm-2">Password:</label>
       <div class="col-sm-3">          
-        <input type="password" class="form-control"  placeholder="Enter password" id="pwd" name="pwd" value="'.$password.'">
+        <input type="password" class="form-control"  placeholder="Enter password" id="pwd" name="pwd" value="'.$password.'" disabled>
       </div>
     </div>
 
@@ -70,7 +70,7 @@ $index = $_POST['index'];
     <div class="form-group">
       <label class="control-label col-sm-2">Confirm Password:</label>
       <div class="col-sm-3">          
-        <input type="password" class="form-control"  placeholder="Enter password" id="cpwd" name="cpwd" value="'.$password.'">
+        <input type="password" class="form-control"  placeholder="Enter password" id="cpwd" name="cpwd" value="'.$password.'" disabled>
       </div>
     </div>';
 

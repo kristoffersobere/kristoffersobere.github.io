@@ -8,8 +8,8 @@ $email = $_POST['email'];
 $address = $_POST['address'];
 $number = $_POST['number'];
 
-$username = $_POST['username'];
-$password = sha1($_POST['pwd']);
+// $username = $_POST['username'];
+// $password = sha1($_POST['pwd']);
 
 
 // $upt = "UPDATE users SET firstname = '$fname'	
@@ -18,8 +18,7 @@ $password = sha1($_POST['pwd']);
 //header('location: users.php');
 
 
-$upt = "UPDATE users SET firstname = '$fname', lastname = '$lname', email = '$email', address = '$address', number = '$number',
-username = '$username' , password = '$password'
+$upt = "UPDATE users SET firstname = '$fname', lastname = '$lname', email = '$email', address = '$address', number = '$number'
 WHERE id = '$index'";
 $res2 = mysqli_query($conn,$upt);
 header('location: users.php');

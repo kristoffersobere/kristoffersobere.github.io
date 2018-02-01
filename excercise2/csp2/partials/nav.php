@@ -27,25 +27,35 @@ if(isset($_SESSION['username'])){
 
       <div id="navbar2" class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
-          <li><a href="Homepage.php">Home</a></li>
-         <!--  <li><a href="menu2.php">Menu</a></li> -->
-          <li><a href="About.php">About</a></li>
-          <li><a href="ContactUs.php">ContactUs</a></li>
-          <li><a href="myreservation.php"><i class="fa fa-bed fa-lg" aria-hidden="true"></i> MyReservation</a></li>
             <?php  
           if (isset($_SESSION['username'])) {
-             echo '<li class="waves-effect waves-dark"><a href="#" data-toggle="modal" data-target="#modalcart">CART <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>(';if (isset($_SESSION['cart'])) {
+             echo '<li><a href="Homepage.php"><i class="fa fa-calendar" aria-hidden="true"></i> Rerserve Now!</a></li><li><a href="myreservation.php"><i class="fa fa-bed fa-lg" aria-hidden="true"></i> MyReservation</a></li><li class="waves-effect waves-dark"><a href="#" data-toggle="modal" data-target="#modalcart">CART <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>(';if (isset($_SESSION['cart'])) {
                echo count($_SESSION['cart']);
              }else {
               echo "0";
              }echo ')</a></li>';
+          }else{
+            echo '<li><a href="Homepage.php">Home</a></li>
+  
+          <li><a href="About.php">About</a></li>
+          <li><a href="ContactUs.php">ContactUs</a></li>';
           }
           ?>
+           
             <?php  if (isset($_SESSION['username'])) {?>
-              <li><a href='logout.php'><span class='glyphicon glyphicon-user'></span>Logout</a></li> 
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Account Settings</a></li>
+               <li><a href='logout.php'><span class='glyphicon glyphicon-user'></span>Logout</a></li> 
+              </ul>
+            </li>
+              
             <?php }else { ?>
               <li class="waves-effect waves-dark"><a href="#" data-toggle="modal" data-target="#ModalSignIn"><span class="fa fa-user"></span> Sign in</a></li>
             <?php } ?>
+
             </ul>
         
       </div>

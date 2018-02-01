@@ -130,6 +130,22 @@
 		});
 	});
 
+		$('#pay').click(function(){
+			var rcode = $(this).data('index');
+
+		
+			$.ajax({
+			method: 'post',
+			url: 'payment.php',
+			data: {
+				edit : true,
+				rcode : rcode
+			},
+			success: function(data){
+				$("#modal-body-pay").html(data);
+			}
+		});
+	});
 
 		$('.render_modal_body').click(function(){
 			var index = $(this).data('index');

@@ -11,6 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="assets/style.css">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
@@ -36,22 +37,16 @@
 <h2><?php echo displayTitle().'<br>' ; ?></h2>
 
 	<div class="row">
-		
-
 			<?php displayContent(); ?>
 	</div>
 
 </div>
-
-
-
-
  
 <script
   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script>  
 <script type="text/javascript" src="js/externaljs.js"></script>
-<?php require 'partials/footer.php'; ?>
+<?php include  'partials/footer.php'; ?>
 </body>
 </html>
